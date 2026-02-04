@@ -1,0 +1,1668 @@
+{
+  "version": "2.6",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#FFFFFF",
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "2k258",
+      "x": 0,
+      "y": 0,
+      "name": "Maria's Meat Landing Page",
+      "width": 1440,
+      "fill": "#f0ece9",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "awXY9",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 80,
+          "padding": [
+            0,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "XNyLL",
+              "name": "logoGroup",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "X2joU",
+                  "name": "logoText",
+                  "fill": "#647257",
+                  "content": "MARIA'S MEAT MARKET",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 24,
+                  "fontWeight": "bold",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "h2gqp",
+                  "name": "logoSubtext",
+                  "fill": "#647257",
+                  "content": "DISTRIBUIDORA DE CARNES",
+                  "fontFamily": "Manrope",
+                  "fontSize": 10,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.5
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "oHBeK",
+              "name": "navGroup",
+              "gap": 48,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "IzHqE",
+                  "name": "navHome",
+                  "fill": "#647257",
+                  "content": "HOME",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "EjSFr",
+                  "name": "navComprar",
+                  "fill": "#647257",
+                  "content": "COMPRAR",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "8kATC",
+                  "name": "navCarne",
+                  "fill": "#647257",
+                  "content": "NUESTRA CARNE",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "dBIYU",
+                  "name": "navSost",
+                  "fill": "#647257",
+                  "content": "SOSTENIBILIDAD",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "aXGs5",
+                  "name": "navContacto",
+                  "fill": "#647257",
+                  "content": "CONTACTO",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 1
+                }
+              ]
+            },
+            {
+              "type": "icon_font",
+              "id": "2zLAJ",
+              "name": "cartIcon",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "shopping-cart",
+              "iconFontFamily": "lucide",
+              "fill": "#647257"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "YYCTA",
+          "name": "Hero Section",
+          "width": "fill_container",
+          "height": 600,
+          "gap": 60,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "GxcLt",
+              "name": "heroContent",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sQC5f",
+                  "name": "heroTagline",
+                  "fill": "#647257",
+                  "content": "CALIDAD PREMIUM",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "5FEPQ",
+                  "name": "heroTitle",
+                  "fill": "#647257",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "Carnes de Alta\nCalidad para\nPaladares Exigentes",
+                  "lineHeight": 1.1,
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 56,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "YCpiG",
+                  "name": "heroDesc",
+                  "fill": "#7a8a6d",
+                  "textGrowth": "fixed-width",
+                  "width": 450,
+                  "content": "Distribuidora de carnes premium para restaurantes y hogares de alto estándar. Seleccionamos los mejores cortes con dedicación artesanal.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "3J74x",
+                  "name": "heroCta",
+                  "fill": "#647257",
+                  "gap": 16,
+                  "padding": [
+                    16,
+                    32
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IJedT",
+                      "name": "heroCtaText",
+                      "fill": "#f0ece9",
+                      "content": "VER PRODUCTOS",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "600",
+                      "letterSpacing": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "4gIua",
+              "name": "Hero Image",
+              "metadata": {
+                "type": "unsplash",
+                "username": "sergeykotenev",
+                "link": "https://unsplash.com/@sergeykotenev",
+                "author": "Sergey Kotenev"
+              },
+              "width": 550,
+              "height": 450,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1690983323501-66dd0049181f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAwMDg4MTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Ob9ex",
+          "name": "Categories Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "27Sbc",
+              "name": "productsTitleGroup",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qH1J3",
+                  "name": "productsTitle1",
+                  "fill": "#647257",
+                  "content": "NUESTRAS",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 42,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "0vgwK",
+                  "name": "productsIcon",
+                  "width": 32,
+                  "height": 32,
+                  "iconFontName": "leaf",
+                  "iconFontFamily": "lucide",
+                  "fill": "#647257"
+                },
+                {
+                  "type": "text",
+                  "id": "eSOV3",
+                  "name": "productsTitle2",
+                  "fill": "#647257",
+                  "content": "CATEGORÍAS",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 42,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dN9As",
+              "name": "categoriesGrid",
+              "width": "fill_container",
+              "gap": 24,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "sqwxj",
+                  "name": "Category Card 1",
+                  "width": 280,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "4vfdH",
+                      "name": "product1Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "zyteng",
+                        "link": "https://unsplash.com/@zyteng",
+                        "author": "Kelvin Zyteng"
+                      },
+                      "width": "fill_container",
+                      "height": 320,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1758346972605-5261ac0409b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAxNTU4OTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "E7d9d",
+                      "name": "product1Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "n8MOm",
+                          "name": "product1Name",
+                          "fill": "#647257",
+                          "content": "CARNES",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 18,
+                          "fontWeight": "600",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "frame",
+                          "id": "13mVP",
+                          "name": "category1Actions",
+                          "gap": 16,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "mH6w7",
+                              "name": "product1Btn",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#647257"
+                              },
+                              "padding": [
+                                8,
+                                24
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "o0MkF",
+                                  "name": "product1BtnText",
+                                  "fill": "#647257",
+                                  "content": "VER CATEGORÍA",
+                                  "fontFamily": "Manrope",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "letterSpacing": 1
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hmwFp",
+                  "name": "Category Card 2",
+                  "width": 280,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vJXyZ",
+                      "name": "product2Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "zhangkaiyv",
+                        "link": "https://unsplash.com/@zhangkaiyv",
+                        "author": "zhang kaiyv"
+                      },
+                      "width": "fill_container",
+                      "height": 320,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1609255792418-24d0c20c217b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAxNTU4OTd8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LiC6O",
+                      "name": "product2Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "RTVtO",
+                          "name": "product2Name",
+                          "fill": "#647257",
+                          "content": "EMBUTIDOS",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 18,
+                          "fontWeight": "600",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "frame",
+                          "id": "kJbp9",
+                          "name": "category2Actions",
+                          "gap": 16,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "0tkKR",
+                              "name": "product2Btn",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#647257"
+                              },
+                              "padding": [
+                                8,
+                                24
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "BBjjW",
+                                  "name": "product2BtnText",
+                                  "fill": "#647257",
+                                  "content": "VER CATEGORÍA",
+                                  "fontFamily": "Manrope",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "letterSpacing": 1
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "SMY9Z",
+                  "name": "Category Card 3",
+                  "width": 280,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "8lICI",
+                      "name": "product3Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "denisagati",
+                        "link": "https://unsplash.com/@denisagati",
+                        "author": "Denis Agati"
+                      },
+                      "width": "fill_container",
+                      "height": 320,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1577193120905-21e0c301d5d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAxNTU4OTd8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ZDtmy",
+                      "name": "product3Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "34S7C",
+                          "name": "product3Name",
+                          "fill": "#647257",
+                          "content": "MARISCOS",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 18,
+                          "fontWeight": "600",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Gp6P3",
+                          "name": "category3Actions",
+                          "gap": 16,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "UQJJR",
+                              "name": "product3Btn",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#647257"
+                              },
+                              "padding": [
+                                8,
+                                24
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "2oCwP",
+                                  "name": "product3BtnText",
+                                  "fill": "#647257",
+                                  "content": "VER CATEGORÍA",
+                                  "fontFamily": "Manrope",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "letterSpacing": 1
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "e47DS",
+                  "name": "Category Card 4",
+                  "width": 280,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kro46",
+                      "name": "product4Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "rodlong",
+                        "link": "https://unsplash.com/@rodlong",
+                        "author": "Rod Long"
+                      },
+                      "width": "fill_container",
+                      "height": 320,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1763688459566-32c3d53f724b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAxNTU4OTh8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "k972E",
+                      "name": "product4Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "OmG9G",
+                          "name": "product4Name",
+                          "fill": "#647257",
+                          "content": "BEBIDAS",
+                          "fontFamily": "Playfair Display",
+                          "fontSize": 18,
+                          "fontWeight": "600",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "frame",
+                          "id": "1iR8Y",
+                          "name": "category4Actions",
+                          "gap": 16,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "NjLYu",
+                              "name": "product4Btn",
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": "#647257"
+                              },
+                              "padding": [
+                                8,
+                                24
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "cC0DI",
+                                  "name": "product4BtnText",
+                                  "fill": "#647257",
+                                  "content": "VER CATEGORÍA",
+                                  "fontFamily": "Manrope",
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                  "letterSpacing": 1
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cwEKJ",
+              "name": "carouselDots",
+              "gap": 12,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "OoPcx",
+                  "name": "dot1",
+                  "fill": "#647257",
+                  "width": 10,
+                  "height": 10
+                },
+                {
+                  "type": "ellipse",
+                  "id": "ULMfW",
+                  "name": "dot2",
+                  "opacity": 0.3,
+                  "fill": "#647257",
+                  "width": 8,
+                  "height": 8
+                },
+                {
+                  "type": "ellipse",
+                  "id": "I5Yps",
+                  "name": "dot3",
+                  "opacity": 0.3,
+                  "fill": "#647257",
+                  "width": 8,
+                  "height": 8
+                },
+                {
+                  "type": "ellipse",
+                  "id": "C8LGt",
+                  "name": "dot4",
+                  "opacity": 0.3,
+                  "fill": "#647257",
+                  "width": 8,
+                  "height": 8
+                },
+                {
+                  "type": "ellipse",
+                  "id": "27zgr",
+                  "name": "dot5",
+                  "opacity": 0.3,
+                  "fill": "#647257",
+                  "width": 8,
+                  "height": 8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Otka3",
+          "name": "Nuestra Carne Section",
+          "width": "fill_container",
+          "height": 550,
+          "children": [
+            {
+              "type": "frame",
+              "id": "f6mKs",
+              "name": "Carne Image",
+              "metadata": {
+                "type": "unsplash",
+                "username": "leongsan",
+                "link": "https://unsplash.com/@leongsan",
+                "author": "Leongsan"
+              },
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1765295218807-2d58d3b01123?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAwMDg5OTR8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "Wi62A",
+              "name": "carneContent",
+              "width": "fill_container",
+              "fill": "#647257",
+              "layout": "vertical",
+              "gap": 32,
+              "padding": 80,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VPeL9",
+                  "name": "carneTagline",
+                  "opacity": 0.7,
+                  "fill": "#f0ece9",
+                  "content": "NUESTRA CARNE",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "FtY1n",
+                  "name": "carneTitle",
+                  "fill": "#f0ece9",
+                  "textGrowth": "fixed-width",
+                  "width": 400,
+                  "content": "Tradición y\nCalidad en\nCada Corte",
+                  "lineHeight": 1.15,
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 48,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "P1Epz",
+                  "name": "carneDesc",
+                  "opacity": 0.9,
+                  "fill": "#f0ece9",
+                  "textGrowth": "fixed-width",
+                  "width": 420,
+                  "content": "Trabajamos directamente con los mejores ganaderos de la región, garantizando carnes de primera calidad con trazabilidad completa. Nuestro proceso de maduración en seco realza el sabor y la terneza de cada pieza.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Manrope",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "qYdno",
+                  "name": "carneBtn",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#f0ece9"
+                  },
+                  "padding": [
+                    14,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uadNs",
+                      "name": "carneBtnText",
+                      "fill": "#f0ece9",
+                      "content": "CONOCER MÁS",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "letterSpacing": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zwD7l",
+          "name": "Sostenibilidad Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 60,
+          "padding": [
+            100,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "gif6R",
+              "name": "sostHeader",
+              "layout": "vertical",
+              "gap": 20,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xjfPL",
+                  "name": "sostTagline",
+                  "fill": "#647257",
+                  "content": "COMPROMISO AMBIENTAL",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "mWczE",
+                  "name": "sostTitle",
+                  "fill": "#647257",
+                  "content": "Sostenibilidad",
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 48,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "hOA8Q",
+                  "name": "sostDesc",
+                  "fill": "#7a8a6d",
+                  "textGrowth": "fixed-width",
+                  "width": 600,
+                  "content": "Creemos en una producción responsable que respeta el medio ambiente y el bienestar animal.",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "3ucvQ",
+              "name": "sostGrid",
+              "width": "fill_container",
+              "gap": 40,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "7T5EO",
+                  "name": "sostCard1",
+                  "width": 280,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#64725730"
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "dNakz",
+                      "name": "sostIcon1",
+                      "width": 40,
+                      "height": 40,
+                      "iconFontName": "leaf",
+                      "iconFontFamily": "lucide",
+                      "fill": "#647257"
+                    },
+                    {
+                      "type": "text",
+                      "id": "9DzvM",
+                      "name": "sostCard1Title",
+                      "fill": "#647257",
+                      "textGrowth": "fixed-width",
+                      "width": 200,
+                      "content": "Ganadería\nResponsable",
+                      "lineHeight": 1.2,
+                      "textAlign": "center",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "GqdLq",
+                      "name": "sostCard1Desc",
+                      "fill": "#7a8a6d",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "Trabajamos con productores que practican ganadería regenerativa y bienestar animal.",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "1UD2i",
+                  "name": "sostCard2",
+                  "width": 280,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#64725730"
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "EFAd4",
+                      "name": "sostIcon2",
+                      "width": 40,
+                      "height": 40,
+                      "iconFontName": "recycle",
+                      "iconFontFamily": "lucide",
+                      "fill": "#647257"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cJrgr",
+                      "name": "sostCard2Title",
+                      "fill": "#647257",
+                      "textGrowth": "fixed-width",
+                      "width": 200,
+                      "content": "Empaque\nEcológico",
+                      "lineHeight": 1.2,
+                      "textAlign": "center",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hvPNw",
+                      "name": "sostCard2Desc",
+                      "fill": "#7a8a6d",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "Utilizamos materiales biodegradables y reciclables en todos nuestros empaques.",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CQckk",
+                  "name": "sostCard3",
+                  "width": 280,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#64725730"
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "n9Wy0",
+                      "name": "sostIcon3",
+                      "width": 40,
+                      "height": 40,
+                      "iconFontName": "map-pin",
+                      "iconFontFamily": "lucide",
+                      "fill": "#647257"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fUIha",
+                      "name": "sostCard3Title",
+                      "fill": "#647257",
+                      "textGrowth": "fixed-width",
+                      "width": 200,
+                      "content": "Producción\nLocal",
+                      "lineHeight": 1.2,
+                      "textAlign": "center",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "24obi",
+                      "name": "sostCard3Desc",
+                      "fill": "#7a8a6d",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "Apoyamos a productores locales reduciendo la huella de carbono en el transporte.",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NeDp1",
+          "name": "Contact Section",
+          "width": "fill_container",
+          "height": 500,
+          "children": [
+            {
+              "type": "frame",
+              "id": "NvC7R",
+              "name": "contactContent",
+              "width": "fill_container",
+              "fill": "#e8e4e0",
+              "layout": "vertical",
+              "gap": 32,
+              "padding": 80,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "656ds",
+                  "name": "contactTagline",
+                  "fill": "#647257",
+                  "content": "CONTACTO",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 3
+                },
+                {
+                  "type": "text",
+                  "id": "AbQeC",
+                  "name": "contactTitle",
+                  "fill": "#647257",
+                  "textGrowth": "fixed-width",
+                  "width": 380,
+                  "content": "¿Listo para\nProbar lo Mejor?",
+                  "lineHeight": 1.15,
+                  "fontFamily": "Playfair Display",
+                  "fontSize": 44,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "PHlta",
+                  "name": "contactDesc",
+                  "fill": "#7a8a6d",
+                  "textGrowth": "fixed-width",
+                  "width": 400,
+                  "content": "Contáctanos para pedidos mayoristas, consultas sobre nuestros productos o para conocer más sobre nuestro proceso.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Manrope",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "y13fF",
+                  "name": "contactInfo",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "u3Uu5",
+                      "name": "contactPhone",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "hkLZa",
+                          "name": "contactPhoneIcon",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "phone",
+                          "iconFontFamily": "lucide",
+                          "fill": "#647257"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jw00o",
+                          "name": "contactPhoneText",
+                          "fill": "#647257",
+                          "content": "+57 300 123 4567",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ci5kJ",
+                      "name": "contactEmail",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "XsgRq",
+                          "name": "contactEmailIcon",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "mail",
+                          "iconFontFamily": "lucide",
+                          "fill": "#647257"
+                        },
+                        {
+                          "type": "text",
+                          "id": "0SxDm",
+                          "name": "contactEmailText",
+                          "fill": "#647257",
+                          "content": "pedidos@mariasmeat.com",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ECDEK",
+                      "name": "contactAddress",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "F9tHR",
+                          "name": "contactAddrIcon",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "map-pin",
+                          "iconFontFamily": "lucide",
+                          "fill": "#647257"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZRypr",
+                          "name": "contactAddrText",
+                          "fill": "#647257",
+                          "content": "Bogotá, Colombia",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nv9RH",
+                  "name": "contactBtn",
+                  "fill": "#647257",
+                  "padding": [
+                    14,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tNAr8",
+                      "name": "contactBtnText",
+                      "fill": "#f0ece9",
+                      "content": "ENVIAR MENSAJE",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "600",
+                      "letterSpacing": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BgvHu",
+              "name": "Contact Image",
+              "metadata": {
+                "type": "unsplash",
+                "username": "rozetsky",
+                "link": "https://unsplash.com/@rozetsky",
+                "author": "Ant Rozetsky"
+              },
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1564068358866-3f1ccefcfbc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAwMDg5MTV8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hrqDS",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "#647257",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            60,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "t37vT",
+              "name": "footerMain",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "EoZES",
+                  "name": "footerBrand",
+                  "width": 300,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3sl2r",
+                      "name": "footerLogo",
+                      "fill": "#f0ece9",
+                      "content": "MARIA'S MEAT MARKET",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "XuTAL",
+                      "name": "footerTagline",
+                      "opacity": 0.7,
+                      "fill": "#f0ece9",
+                      "textGrowth": "fixed-width",
+                      "width": 280,
+                      "content": "Distribuidora de carnes premium para los paladares más exigentes desde 1985.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Manrope",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "RQrAl",
+                      "name": "footerSocial",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "wkUgY",
+                          "name": "socialIg",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "instagram",
+                          "iconFontFamily": "lucide",
+                          "fill": "#f0ece9"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "FxM3y",
+                          "name": "socialFb",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "facebook",
+                          "iconFontFamily": "lucide",
+                          "fill": "#f0ece9"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "HYSEI",
+                          "name": "socialWa",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "message-circle",
+                          "iconFontFamily": "lucide",
+                          "fill": "#f0ece9"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JKtaD",
+                  "name": "footerLinks",
+                  "gap": 80,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "AFw5w",
+                      "name": "footerCol1",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "i82XD",
+                          "name": "footerCol1Title",
+                          "fill": "#f0ece9",
+                          "content": "NAVEGACIÓN",
+                          "fontFamily": "Manrope",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "EWDQH",
+                          "name": "footerCol1Link1",
+                          "opacity": 0.7,
+                          "fill": "#f0ece9",
+                          "content": "Home",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yoX3V",
+                          "name": "footerCol1Link2",
+                          "opacity": 0.7,
+                          "fill": "#f0ece9",
+                          "content": "Comprar",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "veOEn",
+                          "name": "footerCol1Link3",
+                          "opacity": 0.7,
+                          "fill": "#f0ece9",
+                          "content": "Nuestra Carne",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "2wDpM",
+                          "name": "footerCol1Link4",
+                          "opacity": 0.7,
+                          "fill": "#f0ece9",
+                          "content": "Sostenibilidad",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BgsJK",
+                      "name": "footerCol2",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "RtT8A",
+                          "name": "footerCol2Title",
+                          "fill": "#f0ece9",
+                          "content": "PRODUCTOS",
+                          "fontFamily": "Manrope",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "SHx0G",
+                          "name": "footerCol2Link1",
+                          "opacity": 0.7,
+                          "fill": "#f0ece9",
+                          "content": "Cortes Premium",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "P6TJl",
+                          "name": "footerCol2Link2",
+                          "opacity": 0.7,
+                          "fill": "#f0ece9",
+                          "content": "Hamburguesas",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "N05n5",
+                          "name": "footerCol2Link3",
+                          "opacity": 0.7,
+                          "fill": "#f0ece9",
+                          "content": "Embutidos",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "2CxqW",
+                          "name": "footerCol2Link4",
+                          "opacity": 0.7,
+                          "fill": "#f0ece9",
+                          "content": "Ofertas",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tiHsn",
+              "name": "footerBottom",
+              "width": "fill_container",
+              "stroke": {
+                "thickness": {
+                  "top": 1
+                },
+                "fill": "#f0ece930"
+              },
+              "padding": [
+                20,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ca7qE",
+                  "name": "footerCopy",
+                  "opacity": 0.5,
+                  "fill": "#f0ece9",
+                  "content": "© 2024 Maria's Meat Market. Todos los derechos reservados.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "OrKab",
+                  "name": "footerLegal",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hf277",
+                      "name": "footerTerms",
+                      "opacity": 0.5,
+                      "fill": "#f0ece9",
+                      "content": "Términos y Condiciones",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "2SkdK",
+                      "name": "footerPrivacy",
+                      "opacity": 0.5,
+                      "fill": "#f0ece9",
+                      "content": "Política de Privacidad",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "9OFyL",
+      "x": 1664,
+      "y": 87,
+      "name": "Component/Product Card",
+      "width": 280,
+      "layout": "vertical",
+      "gap": 16,
+      "children": [
+        {
+          "type": "frame",
+          "id": "1njoy",
+          "name": "productImage",
+          "metadata": {
+            "type": "unsplash",
+            "username": "tuncerdogu",
+            "link": "https://unsplash.com/@tuncerdogu",
+            "author": "Doğu Tuncer"
+          },
+          "width": "fill_container",
+          "height": 320,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1682159173065-2b49ffd61adb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAwMDg5NzJ8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "aR2g4",
+          "name": "product1Info",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Bwnmp",
+              "name": "product1Name",
+              "fill": "#647257",
+              "content": "PRODUCT NAME",
+              "fontFamily": "Playfair Display",
+              "fontSize": 18,
+              "fontWeight": "600",
+              "letterSpacing": 1
+            },
+            {
+              "type": "frame",
+              "id": "CaBZs",
+              "name": "product1Price",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BGaIB",
+                  "name": "product1PriceNum",
+                  "fill": "#7a8a6d",
+                  "content": "23,500",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "JUDGG",
+                  "name": "product1Unit",
+                  "fill": "#9a9a8a",
+                  "content": "/ X5UNI",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Vu6Fb",
+              "name": "product1Actions",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dNoAX",
+                  "name": "product1Btn",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#647257"
+                  },
+                  "padding": [
+                    8,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "1nxin",
+                      "name": "product1BtnText",
+                      "fill": "#647257",
+                      "content": "INFO",
+                      "fontFamily": "Manrope",
+                      "fontSize": 11,
+                      "fontWeight": "500",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "icon_font",
+                  "id": "nOxZw",
+                  "name": "product1Cart",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "shopping-cart",
+                  "iconFontFamily": "lucide",
+                  "fill": "#647257"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
