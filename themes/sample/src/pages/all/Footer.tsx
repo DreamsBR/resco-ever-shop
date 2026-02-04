@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="flex flex-col gap-10 bg-[#647257] px-20 py-[60px]">
+    <footer className="flex flex-col gap-10 bg-[#12366a] px-20 py-[60px]">
       {/* Main Footer */}
       <div className="flex justify-between w-full">
         {/* Brand */}
