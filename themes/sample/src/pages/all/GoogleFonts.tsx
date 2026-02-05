@@ -12,9 +12,16 @@ export default function GoogleFonts() {
       <style
         dangerouslySetInnerHTML={{
           __html: `
-            /* Base styles for the landing page */
-            body {
+            /* Base styles for the site */
+            html, body {
               background-color: #f0ece9;
+              overflow-x: hidden;
+              max-width: 100vw;
+            }
+
+            /* Prevent horizontal overflow */
+            .content {
+              overflow-x: hidden;
             }
 
             /* Font fallbacks */
@@ -24,6 +31,53 @@ export default function GoogleFonts() {
 
             .font-manrope {
               font-family: 'Manrope', system-ui, sans-serif;
+            }
+
+            /* Hide default Evershop header sections - show only our custom header */
+            .header__middle,
+            .header__bottom {
+              display: none !important;
+            }
+
+            /* Style the header container */
+            .header {
+              padding: 0 !important;
+              background: #f0ece9 !important;
+            }
+
+            .header__top {
+              width: 100%;
+            }
+
+            /* Hide default Evershop footer */
+            footer.footer {
+              display: none !important;
+            }
+
+            /* IMPORTANT: Hide Evershop's default MiniCart Sheet completely */
+            .mini__cart__wrapper,
+            [data-slot="sheet"],
+            [data-slot="sheet-portal"],
+            [data-slot="sheet-overlay"],
+            [data-slot="sheet-content"],
+            .minicart__items__container {
+              display: none !important;
+              visibility: hidden !important;
+              opacity: 0 !important;
+              pointer-events: none !important;
+            }
+
+            /* Cart sidebar styles - ensure it shows above everything */
+            #cart-sidebar-container {
+              display: block !important;
+              visibility: visible !important;
+              opacity: 1 !important;
+            }
+
+            /* Spin animation for loading spinners */
+            @keyframes spin {
+              from { transform: rotate(0deg); }
+              to { transform: rotate(360deg); }
             }
           `
         }}

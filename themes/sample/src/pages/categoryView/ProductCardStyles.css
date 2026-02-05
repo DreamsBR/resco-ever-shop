@@ -1,0 +1,444 @@
+/* ===========================================
+   Custom Product Card Styles for Category View
+   Based on Pencil Design System
+   =========================================== */
+
+/* Color Variables - From Pencil Design */
+:root {
+  --color-primary: #647257;
+  --color-price: #7a8a6d;
+  --color-secondary: #9a9a8a;
+  --color-background: #f8f6f3;
+  --color-white: #ffffff;
+}
+
+/* ============================================
+   CATEGORY PAGE LAYOUT
+   ============================================ */
+
+/* Category Page Top Section */
+.category__page__top {
+  margin-bottom: 2rem;
+}
+
+/* Category Info Section */
+.category__info {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.category__info h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: normal;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.category__info p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+/* Category Grid Layout */
+.page-width.grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ============================================
+   FILTERS SECTION
+   ============================================ */
+
+.category__filter,
+.product-filter {
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e8e6e3;
+}
+
+.category__filter h3,
+.product-filter h3,
+.filter-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.category__filter label,
+.product-filter label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+}
+
+.category__filter input[type="checkbox"],
+.product-filter input[type="checkbox"] {
+  accent-color: var(--color-primary);
+}
+
+.category__filter select,
+.product-filter select {
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  padding: 8px 12px;
+  background: transparent;
+}
+
+/* ============================================
+   SORTING & COUNT SECTION
+   ============================================ */
+
+.border-b.border-border {
+  border-color: #e8e6e3 !important;
+  padding-bottom: 1rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.border-b.border-border > div:first-child {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+/* Sort Dropdown */
+.product-sorting select,
+select[name="sort"] {
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  padding: 8px 24px 8px 12px;
+  background: transparent;
+  letter-spacing: 1px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23647257' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+/* ============================================
+   PRODUCT GRID
+   ============================================ */
+
+.product__list {
+  display: grid;
+  gap: 2rem;
+}
+
+/* ============================================
+   PRODUCT CARD - Based on Pencil Design
+   ============================================ */
+
+.product__list__item {
+  opacity: 0;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.product__list__item:nth-child(1) { animation-delay: 0.05s; }
+.product__list__item:nth-child(2) { animation-delay: 0.1s; }
+.product__list__item:nth-child(3) { animation-delay: 0.15s; }
+.product__list__item:nth-child(4) { animation-delay: 0.2s; }
+.product__list__item:nth-child(5) { animation-delay: 0.25s; }
+.product__list__item:nth-child(6) { animation-delay: 0.3s; }
+
+.product__list__item__inner {
+  background: var(--color-white);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.product__list__item__inner:hover {
+  transform: translateY(-4px);
+}
+
+/* Product Image - Height 320px as per design */
+.product__list__image {
+  position: relative;
+  height: 320px;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-background);
+}
+
+.product__list__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product__list__item__inner:hover .product__list__image img {
+  transform: scale(1.05);
+}
+
+/* Product Info Section - Gap 8px between elements */
+.product__list__info {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Product Name - Playfair Display, 18px, weight 600, color #647257 */
+.product__list__name {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: var(--color-primary) !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.product__list__name a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.product__list__name a:hover {
+  opacity: 0.8;
+}
+
+/* Product Price - Manrope, 14px, color #7a8a6d */
+.product__list__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.product__list__price .regular-price {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  color: var(--color-price) !important;
+}
+
+/* Special Price styling */
+.product__list__price .special-price {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  color: var(--color-price) !important;
+}
+
+/* When there's a special price, dim the regular price */
+.product__list__price:has(.special-price) .regular-price {
+  font-size: 12px !important;
+  color: var(--color-secondary) !important;
+  text-decoration: line-through;
+}
+
+/* Product SKU/Unit - Manrope, 12px, color #9a9a8a */
+.product__list__sku {
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--color-secondary);
+}
+
+/* ============================================
+   PRODUCT ACTIONS - INFO Button & Cart Icon
+   ============================================ */
+
+.product__list__actions {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.product__list__item__inner:hover .product__list__actions {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible !important;
+}
+
+/* INFO Button - Border 1px #647257, padding 8px 24px */
+.product__list__actions button,
+.product__list__actions .btn,
+.product__list__actions a.button {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px;
+  color: var(--color-primary) !important;
+  background: transparent !important;
+  border: 1px solid var(--color-primary) !important;
+  border-radius: 0 !important;
+  padding: 8px 24px !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.product__list__actions button:hover,
+.product__list__actions .btn:hover {
+  background: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+.product__list__actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Cart Icon - 18x18px, color #647257 */
+.product__list__actions svg,
+.product__list__actions .cart-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+  stroke: var(--color-primary);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.product__list__actions svg:hover {
+  opacity: 0.7;
+}
+
+/* ============================================
+   STOCK STATUS
+   ============================================ */
+
+.product__list__stock {
+  margin-top: 4px;
+}
+
+.product__list__stock span {
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.product__list__stock .text-green-600 {
+  color: var(--color-price) !important;
+}
+
+.product__list__stock .text-red-600 {
+  color: #b85c5c !important;
+}
+
+/* ============================================
+   PAGINATION
+   ============================================ */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+.pagination a,
+.pagination span,
+.pagination button {
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-primary);
+  padding: 8px 16px;
+  border: 1px solid var(--color-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.pagination a:hover,
+.pagination button:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.pagination .active,
+.pagination [aria-current="page"] {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .product__list__image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .category__info h1 {
+    font-size: 32px;
+  }
+
+  .product__list__image {
+    height: 240px;
+  }
+
+  .product__list__name {
+    font-size: 16px !important;
+  }
+
+  .product__list__actions {
+    opacity: 1;
+    transform: none;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product__list__image {
+    height: 200px;
+  }
+
+  .product__list__name {
+    font-size: 14px !important;
+  }
+
+  .product__list__price .regular-price {
+    font-size: 13px !important;
+  }
+}

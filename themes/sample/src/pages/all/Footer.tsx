@@ -4,11 +4,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="flex flex-col gap-10 bg-[#647257] px-20 py-[60px]">
+    <footer className="flex flex-col gap-10 bg-[#647257] px-10 py-[60px]">
       {/* Main Footer */}
       <div className="flex justify-between w-full">
         {/* Brand */}
-        <div className="flex flex-col gap-4 w-[300px]">
+        <div className="flex flex-col gap-4 pl-1 pr-1 w-[300px]">
           <span className="text-[#f0ece9] font-['Playfair_Display'] text-xl font-bold tracking-[1px]">
             MARIA'S MEAT MARKET
           </span>
@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
 
         {/* Links */}
-        <div className="flex gap-20">
+        <div className="flex gap-10">
           {/* Navigation Column */}
           <div className="flex flex-col gap-4">
             <span className="text-[#f0ece9] font-['Manrope'] text-[11px] font-semibold tracking-[2px]">
