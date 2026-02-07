@@ -13,10 +13,7 @@ COPY config ./config
 
 # DO NOT copy the media folder. It will be handled by a volume.
 
-# Copy your public files.
-COPY public ./public
-
-# We must copy translations to the image as they are required for the build.
+# Copy translations (ensure the directory exists locally and in git)
 COPY translations ./translations
 
 # Run npm install.
