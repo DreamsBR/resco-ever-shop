@@ -9,7 +9,8 @@
       "Bash(taskkill:*)",
       "Bash(ping:*)",
       "Bash(netstat:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(del \"c:\\\\Users\\\\Marcos\\\\Documents\\\\NewEvershop\\\\my-evershop-app\\\\themes\\\\sample\\\\src\\\\modules\\\\catalog\\\\components\\\\CategoryProducts.tsx\")"
     ]
   }
 }
