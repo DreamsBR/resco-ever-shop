@@ -1,5 +1,6 @@
 {
   "shop": {
+    "homeUrl": "http://34.135.184.185:3000",
     "language": "en",
     "currency": "USD"
   },

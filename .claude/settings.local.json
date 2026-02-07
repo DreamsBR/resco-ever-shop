@@ -10,7 +10,12 @@
       "Bash(ping:*)",
       "Bash(netstat:*)",
       "Bash(findstr:*)",
-      "Bash(del \"c:\\\\Users\\\\Marcos\\\\Documents\\\\NewEvershop\\\\my-evershop-app\\\\themes\\\\sample\\\\src\\\\modules\\\\catalog\\\\components\\\\CategoryProducts.tsx\")"
+      "Bash(del \"c:\\\\Users\\\\Marcos\\\\Documents\\\\NewEvershop\\\\my-evershop-app\\\\themes\\\\sample\\\\src\\\\modules\\\\catalog\\\\components\\\\CategoryProducts.tsx\")",
+      "Bash(docker compose up:*)",
+      "Bash(npm ls:*)",
+      "Bash(docker compose exec:*)",
+      "Bash(docker compose build:*)",
+      "Bash(curl:*)"
     ]
   }
 }

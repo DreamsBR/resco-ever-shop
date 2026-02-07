@@ -7,7 +7,8 @@ services:
       dockerfile: Dockerfile
     restart: always
     volumes:
-      - ./media:/app/media # Mounts the host's media folder to the container
+      - ./media:/app/media
+      - ./config:/app/config
     environment:
       DB_HOST: database
       DB_PORT: 5432
@@ -32,7 +33,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
     ports:
-      - "5432:5432"
+      - "5433:5432"
     networks:
       - myevershop
 
