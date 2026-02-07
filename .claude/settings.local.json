@@ -9,7 +9,10 @@
       "Bash(taskkill:*)",
       "Bash(ping:*)",
       "Bash(netstat:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(echo:*)",
+      "Bash(sudo grep:*)",
+      "Bash(NODE_TLS_REJECT_UNAUTHORIZED=0 npm run setup:*)"
     ]
   }
 }
