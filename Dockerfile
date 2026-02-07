@@ -19,9 +19,6 @@ COPY translations ./translations
 # Run npm install.
 RUN npm install
 
-# Build extensions and themes (generate dist folders)
-RUN npm run tsc --workspaces --if-present
-
 # Build assets.
 RUN npm run build
 

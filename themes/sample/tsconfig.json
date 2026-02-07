@@ -18,13 +18,6 @@
     "strictNullChecks": true,
     "isolatedModules": false,
     "baseUrl": ".",
-    "paths": {
-      "@evershop/evershop": ["../../node_modules/@evershop/evershop"],
-      "@components/*": [
-        "../../node_modules/@evershop/evershop/src/components/*",
-        "../../node_modules/@evershop/evershop/dist/components/*"
-      ]
-    },
     "rootDir": "./src"
   },
   "include": ["src"]
