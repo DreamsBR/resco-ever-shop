@@ -1,0 +1,27 @@
+#CMS Page Grid translations
+Cms Pages,Páginas CMS
+New Page,Nueva página
+There is no page to display,No hay páginas para mostrar
+#CMS Page New/Edit translations
+Create a new page,Crear una nueva página
+Page created successfully!,¡Página creada exitosamente!
+General Information,Información general
+Provide the basic information for the CMS page.,Proporciona la información básica para la página CMS.
+Page Name,Nombre de página
+Enter page name,Ingrese nombre de página
+Page name is required,El nombre de página es obligatorio
+This is the name of the CMS page that will be displayed in the admin panel.,Este es el nombre de la página CMS que se mostrará en el panel de administración.
+Enable this page to make it visible on the frontend.,Habilita esta página para hacerla visible en el frontend.
+Content,Contenido
+SEO Information,Información SEO
+Provide the SEO details for the CMS page.,Proporciona los detalles SEO para la página CMS.
+URL Key,Clave URL
+Enter URL key,Ingrese clave URL
+URL key is required,La clave URL es obligatoria
+This is the URL path for the CMS page.,Esta es la ruta URL para la página CMS.
+Meta Title,Meta título
+Enter meta title,Ingrese meta título
+Meta title is required,El meta título es obligatorio
+This is the meta title for the CMS page.,Este es el meta título para la página CMS.
+Meta Description,Meta descripción
+Enter meta description,Ingrese meta descripción
