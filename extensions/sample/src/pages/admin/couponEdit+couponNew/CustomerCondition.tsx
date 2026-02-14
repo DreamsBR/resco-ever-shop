@@ -39,7 +39,7 @@ export default function CustomerCondition({
           component: {
             default: () => (
               <ReactSelectField
-                label={_("Customer groups")}
+                label={_('Customer groups')}
                 name="user_condition.groups"
                 options={customerGroups.map((group) => ({
                   value: group.value.toString(),
@@ -61,8 +61,8 @@ export default function CustomerCondition({
             default: (
               <ReactSelectCreatableField
                 name="user_condition.emails"
-                label={_("Customer emails")}
-                placeholder={_("Enter customer emails")}
+                label={_('Customer emails')}
+                placeholder={_('Enter customer emails')}
                 isMulti={true}
                 options={(condition?.emails || []).map((email) => ({
                   value: email as string,
@@ -80,13 +80,13 @@ export default function CustomerCondition({
             default: (
               <NumberField
                 label={_("Customer's purchase")}
-                placeholder={_("Enter purchased amount")}
+                placeholder={_('Enter purchased amount')}
                 defaultValue={
                   parseInt(condition?.purchased as unknown as string) || 0
                 }
                 name="user_condition.purchased"
                 min={0}
-                helperText={_("Minimum purchased amount. This only applies to registered customers.")}
+                helperText={_('Minimum purchased amount. This only applies to registered customers.')}
               />
             )
           },

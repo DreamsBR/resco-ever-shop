@@ -131,7 +131,7 @@ function Products({
                       wrapperClassName="form-field mb-0"
                       value={
                         options.find((c) => c.key === product.key)?.label ||
-                        'Unknown'
+                        _('Unknown')
                       }
                     />
                   </>
@@ -147,7 +147,7 @@ function Products({
                       label: operator.label
                     }))}
                     wrapperClassName="form-field mb-0"
-                    placeholder="Select operator"
+                    placeholder={_('Select operator')}
                   />
                 ) : (
                   <>
@@ -166,7 +166,7 @@ function Products({
                       value={
                         operators.find(
                           (c) => c.key === fieldWatch[index]?.operator
-                        )?.label || 'Unknown'
+                        )?.label || _('Unknown')
                       }
                     />
                   </>
