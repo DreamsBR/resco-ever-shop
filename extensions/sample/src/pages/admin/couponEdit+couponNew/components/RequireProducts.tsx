@@ -50,22 +50,22 @@ export function RequiredProducts({
   return (
     <div style={{ marginTop: '1rem', marginBottom: '1rem' }}>
       <div>
-        <span>{_('Order must contains product matched bellow conditions(All)')}</span>
+        <span>{_("Order must contains product matched bellow conditions(All)")}</span>
       </div>
       <Table>
         <TableHeader>
           <TableRow>
             <TableHead>
-              <span>{_('Key')}</span>
+              <span>{_("Key")}</span>
             </TableHead>
             <TableHead>
-              <span>{_('Operator')}</span>
+              <span>{_("Operator")}</span>
             </TableHead>
             <TableHead>
-              <span>{_('Value')}</span>
+              <span>{_("Value")}</span>
             </TableHead>
             <TableHead>
-              <span>{_('Minimum quantity')}</span>
+              <span>{_("Minimum quantity")}</span>
             </TableHead>
             <TableHead> </TableHead>
           </TableRow>
@@ -97,7 +97,7 @@ export function RequiredProducts({
                       name={`condition.required_products.${i}.keylabel`}
                       readOnly
                       value={
-                        options.find((c) => c.key === p.key)?.label || _('Unknown')
+                        options.find((c) => c.key === p.key)?.label || 'Unknown'
                       }
                       wrapperClassName="form-field mb-0"
                     />
@@ -130,7 +130,7 @@ export function RequiredProducts({
                       value={
                         operators.find(
                           (c) => c.key === fieldsWatch[i]?.operator
-                        )?.label || _('Unknown')
+                        )?.label || 'Unknown'
                       }
                       wrapperClassName="form-field mb-0"
                     />
@@ -174,7 +174,7 @@ export function RequiredProducts({
                         ? p.qty
                         : parseInt(p.qty, 10) || 1
                     }
-                    placeholder={_('Enter the quantity')}
+                    placeholder={_("Enter the quantity")}
                     required
                     validation={{
                       required: _('Minimum quantity is required'),
@@ -232,7 +232,7 @@ export function RequiredProducts({
               });
             }}
           >
-            <span>{_('Add product')}</span>
+            <span>{_("Add product")}</span>
           </Button>
         </div>
       </div>

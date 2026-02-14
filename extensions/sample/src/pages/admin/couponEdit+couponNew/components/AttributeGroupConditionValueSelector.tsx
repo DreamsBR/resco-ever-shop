@@ -7,7 +7,6 @@ import {
   DialogTitle,
   DialogTrigger
 } from '@components/common/ui/Dialog.js';
-import { _ } from '@evershop/evershop/lib/locale/translate/_';
 import React from 'react';
 
 export const AttributeGroupConditionValueSelector: React.FC<{
@@ -59,13 +58,13 @@ export const AttributeGroupConditionValueSelector: React.FC<{
             </span>
           ))}
           {selectedIds.current.length === 0 && (
-            <span>{_('Choose Attribute Groups')}</span>
+            <span>Choose Attribute Groups</span>
           )}
         </Button>
       </DialogTrigger>
       <DialogContent className={'max-w-[60vw]'}>
         <DialogHeader>
-          <DialogTitle>{_('Choose Attribute Groups')}</DialogTitle>
+          <DialogTitle>Choose Attribute Groups</DialogTitle>
         </DialogHeader>
         <AttributeGroupSelector
           onSelect={onSelect}

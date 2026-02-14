@@ -1,0 +1,47 @@
+#Attribute Grid translations
+Attributes,Atributos
+New Attribute,Nuevo atributo
+Attribute Name,Nombre de atributo
+Groups,Grupos
+Type,Tipo
+Is Required?,¿Es obligatorio?
+Is Filterable?,¿Es filtrable?
+There is no attribute to display,No hay atributos para mostrar
+Clear Filters,Limpiar filtros
+Group Name,Nombre de grupo
+Enter group name,Ingrese nombre de grupo
+Group name is required,El nombre de grupo es obligatorio
+Save,Guardar
+#Attribute New/Edit translations
+Create a new attribute,Crear un nuevo atributo
+Attribute created successfully!,¡Atributo creado exitosamente!
+Setting,Configuración
+Manage the setting of the attribute.,Administra la configuración del atributo.
+Display on Frontend?,¿Mostrar en el frontend?
+This field is required,Este campo es obligatorio
+Sort Order,Orden de clasificación
+Sort order,Orden de clasificación
+Sort order is required,El orden de clasificación es obligatorio
+Sort order must be a positive number,El orden de clasificación debe ser un número positivo
+General,General
+Manage the general information of the attribute.,Administra la información general del atributo.
+Name,Nombre
+Enter attribute name,Ingrese nombre del atributo
+Attribute name is required,El nombre del atributo es obligatorio
+Code,Código
+Enter attribute code,Ingrese código del atributo
+Attribute code is required,El código del atributo es obligatorio
+Attribute code is used in API and must be unique,El código del atributo se usa en la API y debe ser único
+Text,Texto
+Select,Selección
+Multiselect,Selección múltiple
+Textarea,Área de texto
+Type is required,El tipo es obligatorio
+Attribute options,Opciones del atributo
+Attribute Group,Grupo de atributo
+Select groups the attribute belongs to,Seleccione los grupos a los que pertenece el atributo
+Create a new group,Crear un nuevo grupo
+Option text,Texto de opción
+Option text is required,El texto de opción es obligatorio
+Remove,Eliminar
+Add option,Agregar opción

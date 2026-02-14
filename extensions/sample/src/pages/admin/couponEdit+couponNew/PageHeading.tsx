@@ -14,11 +14,7 @@ export default function CouponEditPageHeading({
   return (
     <PageHeading
       backUrl={backUrl}
-      heading={
-        coupon
-          ? _('Editing ${name}', { name: coupon.coupon })
-          : _('Create a new coupon')
-      }
+      heading={coupon ? _('Editing ${coupon}', { coupon: coupon.coupon }) : _('Create a new coupon')}
     />
   );
 }

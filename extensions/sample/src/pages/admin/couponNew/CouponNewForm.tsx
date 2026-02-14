@@ -34,9 +34,9 @@ export default function CouponNewForm({ action, gridUrl }: CouponNewFormProps) {
       <div className="grid grid-cols-1 gap-5">
         <Card>
           <CardHeader>
-            <CardTitle>{_('General Information')}</CardTitle>
+            <CardTitle>{_("General Information")}</CardTitle>
             <CardDescription>
-              {_('The general information about the coupon.')}
+              {_("The general information about the coupon.")}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -45,9 +45,9 @@ export default function CouponNewForm({ action, gridUrl }: CouponNewFormProps) {
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle>{_('Discount Type')}</CardTitle>
+            <CardTitle>{_("Discount Type")}</CardTitle>
             <CardDescription>
-              {_('The type of discount applied by the coupon.')}
+              {_("The type of discount applied by the coupon.")}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -58,9 +58,9 @@ export default function CouponNewForm({ action, gridUrl }: CouponNewFormProps) {
           <div className="col-span-2 grid grid-cols-1 gap-5 auto-rows-max">
             <Card>
               <CardHeader>
-                <CardTitle>{_('Order conditions')}</CardTitle>
+                <CardTitle>{_("Order conditions")}</CardTitle>
                 <CardDescription>
-                  {_('The conditions related to the order for the coupon to be applied.')}
+                  {_("The conditions related to the order for the coupon to be applied.")}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -71,9 +71,9 @@ export default function CouponNewForm({ action, gridUrl }: CouponNewFormProps) {
           <div className="col-span-1 grid grid-cols-1 gap-5 auto-rows-max">
             <Card>
               <CardHeader>
-                <CardTitle>{_('Customer conditions')}</CardTitle>
+                <CardTitle>{_("Customer conditions")}</CardTitle>
                 <CardDescription>
-                  {_('The conditions related to the customer for the coupon to be applied.')}
+                  {_("The conditions related to the customer for the coupon to be applied.")}
                 </CardDescription>
               </CardHeader>
               <CardContent>

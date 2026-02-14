@@ -65,7 +65,7 @@ function Products({
     <div>
       <div className="mb-2 mt-2">
         <div className="flex justify-start items-center">
-          <div>{_('Maximum')}</div>
+          <div>{_("Maximum")}</div>
           <div style={{ width: '100px', padding: '0 1rem' }}>
             <NumberField
               name="target_products.maxQty"
@@ -83,20 +83,20 @@ function Products({
               wrapperClassName="form-field mb-0"
             />
           </div>
-          <div>{_('quantity of products are matched bellow conditions(All)')}</div>
+          <div>{_("quantity of products are matched bellow conditions(All)")}</div>
         </div>
       </div>
       <Table>
         <TableHeader>
           <TableRow>
             <TableHead>
-              <span>{_('Key')}</span>
+              <span>{_("Key")}</span>
             </TableHead>
             <TableHead>
-              <span>{_('Operator')}</span>
+              <span>{_("Operator")}</span>
             </TableHead>
             <TableHead>
-              <span>{_('Value')}</span>
+              <span>{_("Value")}</span>
             </TableHead>
             <TableHead> </TableHead>
           </TableRow>
@@ -244,7 +244,7 @@ function Products({
               });
             }}
           >
-            <span>{_('Add product')}</span>
+            <span>{_("Add product")}</span>
           </Button>
         </div>
       </div>
@@ -272,7 +272,7 @@ export function TargetProducts({
   return (
     <Item variant={'outline'} className="mt-6">
       <ItemContent>
-        <ItemTitle>{_('Target Products')}</ItemTitle>
+        <ItemTitle>{_("Target Products")}</ItemTitle>
         <Products targetProducts={products} maxQty={maxQty} />
       </ItemContent>
     </Item>

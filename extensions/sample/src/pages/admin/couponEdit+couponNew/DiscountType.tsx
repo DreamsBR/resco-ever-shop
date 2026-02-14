@@ -6,14 +6,14 @@ import { BuyXGetY } from './components/BuyXGetY.js';
 import { TargetProducts } from './components/TargetProducts.js';
 import { Coupon } from './General.js';
 
-function get(obj: any, path: string, defaultValue?: any): any {
+function get(obj: any, path: string, defaultValue: any = undefined) {
   const keys = path.split('.');
   let result = obj;
   for (const key of keys) {
-    result = result?.[key];
-    if (result === undefined) return defaultValue;
+    if (result === null || result === undefined) return defaultValue;
+    result = result[key];
   }
-  return result ?? defaultValue;
+  return result === undefined ? defaultValue : result;
 }
 
 interface DiscountTypeProps {
@@ -67,7 +67,7 @@ export default function DiscountType({ coupon }: DiscountTypeProps) {
       <div className="mt-2">
         <TargetProducts
           products={get(targetProducts, 'products', [])}
-          maxQty={get<number>(targetProducts, 'maxQty', 0)}
+          maxQty={get(targetProducts, 'maxQty', 0)}
         />
         <BuyXGetY
           requireProducts={buyxGety}

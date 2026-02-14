@@ -8,16 +8,6 @@ import React from 'react';
 import { Setting } from './components/Setting.js';
 import './General.scss';
 
-function get(obj: any, path: string, defaultValue?: any): any {
-  const keys = path.split('.');
-  let result = obj;
-  for (const key of keys) {
-    result = result?.[key];
-    if (result === undefined) return defaultValue;
-  }
-  return result ?? defaultValue;
-}
-
 export interface Coupon {
   coupon: string;
   status: number;
@@ -56,6 +46,16 @@ export interface Coupon {
   };
 }
 
+function get(obj: any, path: string, defaultValue: any = undefined) {
+  const keys = path.split('.');
+  let result = obj;
+  for (const key of keys) {
+    if (result === null || result === undefined) return defaultValue;
+    result = result[key];
+  }
+  return result === undefined ? defaultValue : result;
+}
+
 export default function General({ coupon }: { coupon?: Coupon }) {
   return (
     <Area
@@ -67,15 +67,16 @@ export default function General({ coupon }: { coupon?: Coupon }) {
             default: (
               <InputField
                 name="coupon"
-                label={_('Coupon Code')}
+                label={_("Coupon Code")}
                 defaultValue={coupon?.coupon || ''}
-                placeholder={_('Enter coupon code')}
+                placeholder={_("Enter coupon code")}
                 required
                 validation={{
                   required: _('Coupon code is required'),
                   pattern: {
                     value: /^[a-zA-Z0-9_-]+$/,
-                    message: _('Coupon code can only contain letters, numbers, underscores, and hyphens')
+                    message:
+                      _('Coupon code can only contain letters, numbers, underscores, and hyphens')
                   }
                 }}
               />
@@ -88,9 +89,9 @@ export default function General({ coupon }: { coupon?: Coupon }) {
             default: (
               <TextareaField
                 name="description"
-                label={_('Description')}
+                label={_("Description")}
                 defaultValue={coupon?.description || ''}
-                placeholder={_('Enter description')}
+                placeholder={_("Enter description")}
                 required
                 validation={{
                   required: _('Description is required')
@@ -105,7 +106,7 @@ export default function General({ coupon }: { coupon?: Coupon }) {
             default: (
               <RadioGroupField
                 name="status"
-                label={_('Status')}
+                label={_("Status")}
                 options={[
                   { label: _('Enabled'), value: 1 },
                   { label: _('Disabled'), value: 0 }
@@ -135,8 +136,8 @@ export default function General({ coupon }: { coupon?: Coupon }) {
             default: (
               <CheckboxField
                 name="free_shipping"
-                defaultValue={parseInt(get(coupon, 'freeShipping'), 10) === 1}
-                label={_('Free shipping?')}
+                defaultValue={parseInt(get(coupon, 'freeShipping', '0'), 10) === 1}
+                label={_("Free shipping?")}
               />
             )
           },

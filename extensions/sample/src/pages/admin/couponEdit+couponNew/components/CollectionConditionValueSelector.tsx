@@ -7,7 +7,6 @@ import {
   DialogTitle,
   DialogTrigger
 } from '@components/common/ui/Dialog.js';
-import { _ } from '@evershop/evershop/lib/locale/translate/_';
 import React from 'react';
 
 export const CollectionConditionValueSelector: React.FC<{
@@ -62,12 +61,12 @@ export const CollectionConditionValueSelector: React.FC<{
               )}
             </span>
           ))}
-          {selectedIds.current.length === 0 && <span>{_('Choose Collections')}</span>}
+          {selectedIds.current.length === 0 && <span>Choose Collections</span>}
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{_('Choose Collections')}</DialogTitle>
+          <DialogTitle>Choose Collections</DialogTitle>
         </DialogHeader>
         <CollectionSelector
           onSelect={onSelect}

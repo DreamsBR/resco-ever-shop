@@ -1,8 +1,8 @@
 import React from 'react';
+import { Operator } from './conditionCriterias.js';
 import { AttributeGroupConditionValueSelector } from './AttributeGroupConditionValueSelector.js';
 import { CategoryConditionValueSelector } from './CategoryConditionValueSelector.js';
 import { CollectionConditionValueSelector } from './CollectionConditionValueSelector.js';
-import { Operator } from './conditionCriterias.js';
 import { PriceConditionValueSelector } from './PriceConditionValueSelector.js';
 import { SkuConditionValueSelector } from './SkuConditionValueSelector.js';
 
