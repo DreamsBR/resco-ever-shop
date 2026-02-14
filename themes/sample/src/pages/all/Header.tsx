@@ -5,6 +5,7 @@ import { useCartState, useCartDispatch } from '@components/frontStore/cart/CartC
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isCartVisible, setIsCartVisible] = useState(false); // For transition control
   const [isMounted, setIsMounted] = useState(false);
   const [removingItemId, setRemovingItemId] = useState<string | null>(null);
   const prevQtyRef = useRef<number>(-1); // Start at -1 to detect first load
@@ -23,6 +24,20 @@ export default function Header() {
     setIsMounted(true);
     return () => setIsMounted(false);
   }, []);
+
+  // Control cart visibility with transition delay
+  useEffect(() => {
+    if (isCartOpen) {
+      // Show immediately when opening
+      setIsCartVisible(true);
+    } else {
+      // Hide after transition completes when closing
+      const timer = setTimeout(() => {
+        setIsCartVisible(false);
+      }, 350); // Slightly longer than transition duration
+      return () => clearTimeout(timer);
+    }
+  }, [isCartOpen]);
 
   // Open cart when item is added (after initial load)
   useEffect(() => {
@@ -44,18 +59,6 @@ export default function Header() {
   const closeCart = useCallback(() => {
     setIsCartOpen(false);
   }, []);
-
-  // Control body scroll
-  useEffect(() => {
-    if (isMenuOpen || isCartOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isMenuOpen, isCartOpen]);
 
   // ESC key to close
   useEffect(() => {
@@ -82,7 +85,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="flex items-center justify-between w-full h-16 sm:h-20 px-4 sm:px-8 lg:px-20 bg-[#f0ece9]">
+      <div className="fixed top-0 left-0 right-0 flex items-center justify-between w-full h-16 sm:h-20 px-4 sm:px-8 lg:px-20 bg-[#f0ece9] z-50">
         {/* Logo */}
         <a href="/" className="flex flex-col gap-0.5">
           <span className="text-[#647257] font-['Playfair_Display'] text-lg sm:text-2xl font-bold tracking-[1px] sm:tracking-[2px]">
@@ -159,10 +162,18 @@ export default function Header() {
       </div>
 
       {/* Cart Sidebar Portal */}
-      {isMounted && createPortal(
+      {isMounted && isCartVisible && createPortal(
         <div
           id="cart-sidebar-container"
-          style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: isCartOpen ? 'auto' : 'none', zIndex: 10000 }}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: 9999,
+            pointerEvents: isCartOpen ? 'auto' : 'none'
+          }}
         >
           {/* Overlay - clickable to close */}
           <div
@@ -176,9 +187,8 @@ export default function Header() {
               backgroundColor: 'rgba(0,0,0,0.5)',
               opacity: isCartOpen ? 1 : 0,
               transition: 'opacity 300ms ease',
-              pointerEvents: isCartOpen ? 'auto' : 'none',
-              zIndex: 10001,
-              cursor: 'pointer'
+              zIndex: 1,
+              cursor: isCartOpen ? 'pointer' : 'default'
             }}
           />
 
@@ -195,7 +205,7 @@ export default function Header() {
               boxShadow: '-4px 0 20px rgba(0,0,0,0.15)',
               transform: isCartOpen ? 'translateX(0)' : 'translateX(100%)',
               transition: 'transform 300ms ease',
-              zIndex: 10002,
+              zIndex: 2,
               display: 'flex',
               flexDirection: 'column'
             }}
