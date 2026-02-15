@@ -99,6 +99,10 @@ export const query = `
             url
             alt
           }
+          images {
+            url
+            alt
+          }
         }
         total
       }

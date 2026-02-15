@@ -110,7 +110,7 @@ export default function Header() {
           <a href="/" className="text-[#647257] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
             HOME
           </a>
-          <a href="/productos" className="text-[#647257] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
+          <a href="/#categorias" className="text-[#647257] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
             COMPRAR
           </a>
           <a href="#nuestra-carne" className="text-[#647257] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
@@ -450,7 +450,7 @@ export default function Header() {
             <a href="/" className="text-[#647257] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               HOME
             </a>
-            <a href="/productos" className="text-[#647257] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#categorias" className="text-[#647257] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               COMPRAR
             </a>
             <a href="#nuestra-carne" className="text-[#647257] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>

@@ -143,7 +143,7 @@ function HeroCarousel() {
   const slide = heroSlides[currentSlide];
 
   return (
-    <section className="relative w-full h-[100vh] min-h-[600px] max-h-[900px] overflow-hidden">
+    <section className="relative w-full h-screen min-h-[500px] overflow-hidden">
       {/* Background Image with Overlay */}
       <div
         className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out ${imageTransitioning ? 'opacity-0' : 'opacity-100'}`}
@@ -153,59 +153,66 @@ function HeroCarousel() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-8">
-        <div className="text-center max-w-4xl mx-auto">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16">
+        <div className="text-center max-w-5xl mx-auto px-4">
           <h1
-            className={`text-white font-['Playfair_Display'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6 transition-all duration-500 ease-out ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+            className={`text-white font-['Playfair_Display'] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.15] mb-4 sm:mb-6 transition-all duration-500 ease-out ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
           >
             {slide.title}
           </h1>
           <p
-            className={`text-white/80 font-['Manrope'] text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mb-8 transition-all duration-500 ease-out delay-100 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+            className={`text-white/85 font-['Manrope'] text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl mx-auto mb-6 sm:mb-8 transition-all duration-500 ease-out delay-100 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
           >
             {slide.subtitle}
           </p>
           <a
             href="/productos"
-            className={`inline-flex bg-[#8B0000] text-white font-['Manrope'] text-sm font-semibold tracking-[1px] px-8 py-4 hover:bg-[#a00000] transition-all duration-500 ease-out delay-200 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+            className={`inline-flex bg-[#8B0000] text-white font-['Manrope'] text-xs sm:text-sm font-semibold tracking-[1px] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#a00000] transition-all duration-500 ease-out delay-200 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
           >
             VER PRODUCTOS
           </a>
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Hidden on small screens */}
       <button
         onClick={goToPrev}
-        className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center transition-colors"
+        className="hidden sm:flex absolute left-2 sm:left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/60 items-center justify-center transition-colors"
         aria-label="Anterior"
       >
-        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center transition-colors"
+        className="hidden sm:flex absolute right-2 sm:right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/60 items-center justify-center transition-colors"
         aria-label="Siguiente"
       >
-        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
         </svg>
       </button>
 
       {/* Dots Navigation */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 bg-black/30 px-4 py-2 rounded-full">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 sm:gap-3 bg-black/30 px-3 sm:px-4 py-2 rounded-full">
         {heroSlides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
+            className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all ${
               index === currentSlide ? 'bg-white scale-110' : 'bg-white/50 hover:bg-white/70'
             }`}
             aria-label={`Ir a slide ${index + 1}`}
           />
         ))}
+      </div>
+
+      {/* Scroll indicator - Mobile only */}
+      <div className="absolute bottom-16 sm:bottom-20 left-1/2 -translate-x-1/2 z-20 animate-bounce sm:hidden">
+        <svg className="w-6 h-6 text-white/70" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
       </div>
     </section>
   );
@@ -502,46 +509,6 @@ function ContactSection() {
   );
 }
 
-// ============ CUSTOM FOOTER ============
-function CustomFooter() {
-  return (
-    <footer className="bg-[#647257] px-4 sm:px-8 lg:px-20 py-8 lg:py-12">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
-        {/* Logo */}
-        <div className="flex flex-col items-center sm:items-start gap-1">
-          <span className="text-[#f0ece9] font-['Playfair_Display'] text-xl font-bold tracking-[2px]">
-            MARIA'S MEAT MARKET
-          </span>
-          <span className="text-[#f0ece9] font-['Manrope'] text-[10px] tracking-[1.5px] opacity-70">
-            DISTRIBUIDORA DE CARNES
-          </span>
-        </div>
-
-        {/* Links */}
-        <nav className="flex flex-wrap justify-center gap-6 lg:gap-8">
-          <a href="/" className="text-[#f0ece9] font-['Manrope'] text-xs tracking-[1px] opacity-80 hover:opacity-100 transition-opacity">
-            HOME
-          </a>
-          <a href="/productos" className="text-[#f0ece9] font-['Manrope'] text-xs tracking-[1px] opacity-80 hover:opacity-100 transition-opacity">
-            COMPRAR
-          </a>
-          <a href="#nuestra-carne" className="text-[#f0ece9] font-['Manrope'] text-xs tracking-[1px] opacity-80 hover:opacity-100 transition-opacity">
-            NUESTRA CARNE
-          </a>
-          <a href="#contacto" className="text-[#f0ece9] font-['Manrope'] text-xs tracking-[1px] opacity-80 hover:opacity-100 transition-opacity">
-            CONTACTO
-          </a>
-        </nav>
-
-        {/* Copyright */}
-        <span className="text-[#f0ece9] font-['Manrope'] text-xs opacity-60">
-          © 2024 Maria's Meat Market
-        </span>
-      </div>
-    </footer>
-  );
-}
-
 // ============ ANIMATION STYLES ============
 function AnimationStyles() {
   return (
@@ -619,6 +586,19 @@ function AnimationStyles() {
       .hover-scale:hover {
         transform: scale(1.02);
       }
+
+      /* Scroll margin for anchor navigation - compensate for fixed header */
+      [id="categorias"],
+      [id="nuestra-carne"],
+      [id="sostenibilidad"],
+      [id="contacto"] {
+        scroll-margin-top: 100px;
+      }
+
+      /* Smooth scrolling for the entire page */
+      html {
+        scroll-behavior: smooth;
+      }
     `}} />
   );
 }
@@ -631,7 +611,9 @@ export default function LandingPage({ categories }: LandingPageProps) {
     <div className="w-full max-w-[1920px] mx-auto overflow-hidden">
       <AnimationStyles />
       <HeroCarousel />
-      <CategoriesSection categories={categoryList} />
+      <section id="categorias">
+        <CategoriesSection categories={categoryList} />
+      </section>
       <section id="nuestra-carne">
         <NuestraCarneSection />
       </section>
@@ -641,7 +623,6 @@ export default function LandingPage({ categories }: LandingPageProps) {
       <section id="contacto">
         <ContactSection />
       </section>
-      <CustomFooter />
     </div>
   );
 }

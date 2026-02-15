@@ -2,6 +2,11 @@ import React from 'react';
 import { AddToCart } from '@components/frontStore/cart/AddToCart.js';
 import { toast } from 'react-toastify';
 
+interface ProductImage {
+  url: string;
+  alt?: string;
+}
+
 interface ProductCardProps {
   product: {
     productId: string;
@@ -13,22 +18,38 @@ interface ProductCardProps {
       special?: { value: number; text: string };
     };
     inventory: { isInStock: boolean };
-    image?: { url: string; alt?: string };
+    image?: ProductImage;
+    images?: ProductImage[];
   };
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  // Get primary image and second image for hover effect
+  const primaryImage = product.image;
+  const secondImage = product.images && product.images.length > 1 ? product.images[1] : null;
+
   return (
     <div className="product-card">
       {/* Product Image */}
       <div className="product-card__image">
         <a href={product.url}>
-          {product.image ? (
-            <img
-              src={product.image.url}
-              alt={product.image.alt || product.name}
-              loading="lazy"
-            />
+          {primaryImage ? (
+            <>
+              <img
+                src={primaryImage.url}
+                alt={primaryImage.alt || product.name}
+                loading="lazy"
+                className="product-card__img-primary"
+              />
+              {secondImage && (
+                <img
+                  src={secondImage.url}
+                  alt={secondImage.alt || product.name}
+                  loading="lazy"
+                  className="product-card__img-secondary"
+                />
+              )}
+            </>
           ) : (
             <div className="product-card__no-image">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#647257" strokeWidth="1.5" opacity="0.3">
@@ -128,11 +149,34 @@ export function ProductCard({ product }: ProductCardProps) {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 0.5s ease;
+          transition: opacity 0.4s ease, transform 0.5s ease;
+        }
+
+        /* Primary image - visible by default */
+        .product-card__img-primary {
+          position: relative;
+          z-index: 1;
+        }
+
+        /* Secondary image - hidden by default, shown on hover */
+        .product-card__img-secondary {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          z-index: 2;
+        }
+
+        .product-card:hover .product-card__img-primary {
+          opacity: 0;
+        }
+
+        .product-card:hover .product-card__img-secondary {
+          opacity: 1;
         }
 
         .product-card:hover .product-card__image img {
-          transform: scale(1.05);
+          transform: scale(1.02);
         }
 
         .product-card__no-image {
