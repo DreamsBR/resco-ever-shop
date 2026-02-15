@@ -198,6 +198,9 @@ select[name="sort"] {
   background: var(--color-white);
   overflow: hidden;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .product__list__item__inner:hover {
@@ -213,24 +216,28 @@ select[name="sort"] {
   background: var(--color-background);
 }
 
-.product__list__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.product__list__image img,
+.product__list__image > a > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
   transition: transform 0.5s ease;
+  display: block;
 }
 
-.product__list__item__inner:hover .product__list__image img {
+.product__list__item__inner:hover .product__list__image img,
+.product__list__item__inner:hover .product__list__image > a > img {
   transform: scale(1.05);
 }
 
 /* Product Info Section - Gap 8px between elements */
 .product__list__info {
-  padding: 1rem 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  width: 100%;
 }
 
 /* Product Name - Playfair Display, 18px, weight 600, color #647257 */
@@ -305,20 +312,19 @@ select[name="sort"] {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  opacity: 0;
-  transform: translateY(10px);
+  opacity: 1;
+  transform: translateY(0);
   transition: all 0.3s ease;
 }
 
 .product__list__item__inner:hover .product__list__actions {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible !important;
+  transform: scale(1.05);
 }
 
 /* INFO Button - Border 1px #647257, padding 8px 24px */
 .product__list__actions button,
 .product__list__actions .btn,
+.product__list__actions a.btn,
 .product__list__actions a.button {
   font-family: 'Manrope', sans-serif !important;
   font-size: 11px !important;
@@ -332,12 +338,16 @@ select[name="sort"] {
   cursor: pointer;
   transition: all 0.2s ease;
   text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .product__list__actions button:hover,
-.product__list__actions .btn:hover {
+.product__list__actions .btn:hover,
+.product__list__actions a.btn:hover {
   background: var(--color-primary) !important;
   color: var(--color-white) !important;
+  transform: scale(1.05);
 }
 
 .product__list__actions button:disabled {
@@ -348,16 +358,21 @@ select[name="sort"] {
 /* Cart Icon - 18x18px, color #647257 */
 .product__list__actions svg,
 .product__list__actions .cart-icon {
-  width: 18px;
-  height: 18px;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px;
+  min-height: 18px;
   color: var(--color-primary);
   stroke: var(--color-primary);
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
-.product__list__actions svg:hover {
+.product__list__actions svg:hover,
+.product__list__actions .cart-icon:hover {
   opacity: 0.7;
+  transform: scale(1.1);
 }
 
 /* ============================================

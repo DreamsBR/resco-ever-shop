@@ -1,8 +1,7 @@
 {
   "shop": {
-    "homeUrl": "http://localhost:3000",
-    "language": "en",
-    "currency": "USD"
+    "language": "es",
+    "currency": "PEN"
   },
   "system": {
     "extensions": [

@@ -1,0 +1,112 @@
+#Admin Dashboard translations
+Dashboard,Panel de control
+Sale Statistics,Estadísticas de ventas
+Overview of sales data over selected periods,Resumen de datos de ventas en los períodos seleccionados
+Daily,Diario
+Weekly,Semanal
+Monthly,Mensual
+Best Sellers,Más vendidos
+A list of best selling products,Lista de los productos más vendidos
+View All Products,Ver todos los productos
+Look like you just started. No bestsellers yet.,Parece que recién empezaste. Aún no hay productos más vendidos.
+ sold, vendidos
+Lifetime Sales,Ventas totales
+Overview of total sales and order status over the lifetime of your,Resumen de ventas totales y estado de pedidos durante toda la vida de tu tienda
+ orders, pedidos
+ lifetime sale, ventas totales
+% of orders completed,% de pedidos completados
+% of orders cancelled,% de pedidos cancelados
+Completed,Completados
+Cancelled,Cancelados
+Others,Otros
+Best customers,Mejores clientes
+A list of customers who have placed the most orders,Lista de clientes que han realizado más pedidos
+View all customers,Ver todos los clientes
+Full name,Nombre completo
+Orders,Pedidos
+Total,Total
+#Coupon New/Edit translations
+Create a new coupon,Crear un nuevo cupón
+Coupon created successfully!,¡Cupón creado exitosamente!
+General Information,Información general
+The general information about the coupon.,La información general sobre el cupón.
+Discount Type,Tipo de descuento
+The type of discount applied by the coupon.,El tipo de descuento aplicado por el cupón.
+Order conditions,Condiciones del pedido
+The conditions related to the order for the coupon to be applied.,Las condiciones relacionadas con el pedido para que se aplique el cupón.
+Customer conditions,Condiciones del cliente
+The conditions related to the customer for the coupon to be applied.,Las condiciones relacionadas con el cliente para que se aplique el cupón.
+Coupon Code,Código de cupón
+Enter coupon code,Ingrese código de cupón
+Coupon code is required,El código de cupón es obligatorio
+Coupon code can only contain letters, numbers, underscores, and hyphens,El código de cupón solo puede contener letras números guiones bajos y guiones
+Description,Descripción
+Enter description,Ingrese descripción
+Description is required,La descripción es obligatoria
+Status,Estado
+Enabled,Habilitado
+Disabled,Deshabilitado
+Status is required,El estado es obligatorio
+Free shipping?,¿Envío gratis?
+Discount amount,Monto de descuento
+Start date,Fecha de inicio
+End date,Fecha de fin
+Discount amount is required,El monto de descuento es obligatorio
+Fixed discount to entire order,Descuento fijo para todo el pedido
+Percentage discount to entire order,Descuento porcentual para todo el pedido
+Fixed discount to specific products,Descuento fijo para productos específicos
+Percentage discount to specific products,Descuento porcentual para productos específicos
+Buy X get Y,Compra X obtén Y
+Discount type is required,El tipo de descuento es obligatorio
+Minimum purchase amount,Monto mínimo de compra
+The minimum total amount required for the order to qualify for this coupon.,El monto total mínimo requerido para que el pedido califique para este cupón.
+Minimum purchase qty,Cantidad mínima de compra
+Minimum purchase quantity,Cantidad mínima de compra
+The minimum quantity of items required in the order to qualify for this coupon.,La cantidad mínima de artículos requeridos en el pedido para calificar para este cupón.
+Customer groups,Grupos de clientes
+Customer emails,Correos de clientes
+Enter customer emails,Ingrese correos de clientes
+Customer's purchase,Compras del cliente
+Enter purchased amount,Ingrese monto de compra
+Minimum purchased amount. This only applies to registered customers.,Monto mínimo de compra. Esto solo aplica a clientes registrados.
+Maximum,Máximo
+quantity of products are matched bellow conditions(All),cantidad de productos que coinciden con las condiciones siguientes (Todos)
+Maximum quantity is required,La cantidad máxima es obligatoria
+Maximum quantity must be greater than or equal to 0,La cantidad máxima debe ser mayor o igual a 0
+Key,Clave
+Operator,Operador
+Value,Valor
+Add product,Agregar producto
+Target Products,Productos objetivo
+Choose Product SKU,Elegir SKU del producto
+Choose SKU,Elegir SKU
+Sku,SKU
+Max of Y,Máximo de Y
+Discount percent,Porcentaje de descuento
+Buy qty is required,La cantidad de compra es obligatoria
+Get qty is required,La cantidad a obtener es obligatoria
+Max of Y is required,El máximo de Y es obligatorio
+Discount percent is required,El porcentaje de descuento es obligatorio
+Order must contains product matched bellow conditions(All),El pedido debe contener productos que coincidan con las condiciones siguientes (Todos)
+Minimum quantity,Cantidad mínima
+Minimum quantity is required,La cantidad mínima es obligatoria
+Enter the quantity,Ingrese la cantidad
+Category,Categoría
+Collection,Colección
+Attribute Group,Grupo de atributos
+Price,Precio
+Equal,Igual
+Not equal,No igual
+Greater,Mayor
+Greater or equal,Mayor o igual
+Smaller,Menor
+Equal or smaller,Igual o menor
+In,En
+Not in,No en
+Choose Attribute Groups,Elegir grupo
+Select,Seleccionar
+No options,Sin opciones
+Cancel,Cancelar
+Save,Guardar
+Choose Categories,Elegir categorías
+Search categories,Buscar categorías

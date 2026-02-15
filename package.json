@@ -8,6 +8,7 @@
     "themes/*"
   ],
   "scripts": {
+    "postinstall": "patch-package",
     "setup": "evershop install",
     "build": "evershop build",
     "start": "evershop start",
@@ -28,6 +29,7 @@
     "@types/pg": "^8.16.0",
     "@types/react": "^19.2.10",
     "execa": "^9.6.1",
+    "patch-package": "^8.0.1",
     "typescript": "^5.9.3"
   },
   "main": "index.js",

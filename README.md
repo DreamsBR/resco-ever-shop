@@ -216,6 +216,34 @@ Evershop soporta despliegue en:
 - **AWS** - EC2, ECS, o Elastic Beanstalk
 - **DigitalOcean** - App Platform o Droplets
 
+## Parches aplicados a `@evershop/evershop`
+
+Este proyecto incluye un archivo de parche (`patches/@evershop+evershop+2.1.1.patch`) que corrige dos bugs en EverShop v2.1.1 relacionados con los estilos del panel de administración. El parche se aplica automáticamente vía `patch-package` cada vez que se ejecuta `npm install`.
+
+### Bug 1: Estilos de formularios no se cargan en el admin
+
+**Archivo:** `dist/modules/base/pages/admin/all/FormCss.js`
+
+El componente `FormCss` no importaba `form.scss`, lo que causaba que todos los estilos de formularios (inputs, selects, textareas, checkboxes, labels, validaciones, react-select, etc.) estuvieran completamente ausentes en el panel de administración.
+
+**Fix:** Se agregó `import './form.scss';` al componente.
+
+### Bug 2: Tailwind CSS v4 no genera clases de utilidad en Windows
+
+**Archivo:** `dist/lib/webpack/plugins/InjectTailwindSources.js`
+
+El plugin `InjectTailwindSources` inyecta directivas `@source` en el CSS para que Tailwind CSS v4 escanee los archivos de componentes. En Windows, `path.resolve` genera rutas con backslash (`\`), pero en CSS los backslashes son caracteres de escape (`\r` = retorno de carro, `\n` = salto de línea, etc.), lo que corrompe las rutas y Tailwind no puede encontrar los componentes de UI.
+
+**Resultado:** Clases como `.bg-primary`, `.inline-flex`, `.rounded-md`, `.text-primary-foreground`, etc. no se generaban, dejando botones y otros componentes de UI sin estilo.
+
+**Fix:** Se normalizan las rutas de `\` a `/` antes de inyectarlas en CSS.
+
+### Mantenimiento del parche
+
+- El parche se re-aplica automáticamente con cada `npm install` gracias al script `postinstall` en `package.json`.
+- Si EverShop publica una versión que corrija estos bugs, eliminar el archivo `patches/@evershop+evershop+2.1.1.patch` y la dependencia `patch-package`.
+- Para regenerar el parche tras realizar cambios adicionales en `node_modules/@evershop/evershop`: `npx patch-package @evershop/evershop`.
+
 ## Solución de Problemas
 
 ### Error de conexión a base de datos
@@ -230,6 +258,18 @@ rm -rf .evershop node_modules
 npm install
 npm run build
 ```
+
+### Estilos del admin no se muestran
+
+Si los estilos del panel de administración no se cargan correctamente (botones sin estilo, formularios sin bordes, etc.), verificar que el parche esté aplicado y trasladar los estilos base compilados a `public/assets`:
+
+```bash
+npx patch-package @evershop/evershop
+npm run build
+powershell -NoLogo -NoProfile -Command "New-Item -ItemType Directory -Force -Path public\assets | Out-Null; Copy-Item -Path .evershop\build\* -Destination public\assets -Recurse -Force"
+```
+
+> **Nota:** El último comando copia los archivos compilados de `.evershop/build/` a `public/assets/`, que es donde el servidor busca los estilos base. Es necesario ejecutarlo después de cada `npm run build`.
 
 ### Las fuentes no cargan
 

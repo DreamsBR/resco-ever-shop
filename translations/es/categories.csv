@@ -1,0 +1,52 @@
+#Category Grid translations
+Categories,Categorías
+New Category,Nueva categoría
+Search,Buscar
+Clear filters,Limpiar filtros
+Category Name,Nombre de categoría
+Status,Estado
+Include In Menu,Incluir en menú
+Yes,Sí
+No,No
+Delete,Eliminar
+Can't be undone,No se puede deshacer
+Cancel,Cancelar
+There is no category to display,No hay categorías para mostrar
+#Category New/Edit translations
+Create a new category,Crear una nueva categoría
+Category created successfully!,¡Categoría creada exitosamente!
+General,General
+Manage the general information of the category.,Administra la información general de la categoría.
+Parent category,Categoría padre
+Change,Cambiar
+Unlink,Desvincular
+Select category,Seleccionar categoría
+Select Parent Category,Seleccionar categoría padre
+Enter Category Name,Ingrese nombre de categoría
+Category name is required,El nombre de categoría es obligatorio
+Description,Descripción
+Category Image,Imagen de categoría
+Upload an image for the category.,Sube una imagen para la categoría.
+Search engine optimize,Optimización para motores de búsqueda
+Manage the SEO settings of the category.,Administra la configuración SEO de la categoría.
+URL key,Clave URL
+Enter URL key,Ingrese clave URL
+URL key is required,La clave URL es obligatoria
+URL key must be lowercase and can only contain alphanumeric characters and hyphens,La clave URL debe ser en minúsculas y solo puede contener caracteres alfanuméricos y guiones
+Meta title,Meta título
+Enter Meta title,Ingrese meta título
+Meta title is required,El meta título es obligatorio
+Meta description,Meta descripción
+Enter Meta description,Ingrese meta descripción
+Meta description is required,La meta descripción es obligatoria
+Manage the status settings of the category.,Administra la configuración de estado de la categoría.
+Disabled,Deshabilitado
+Enabled,Habilitado
+This field is required,Este campo es obligatorio
+Include in Store Menu?,¿Incluir en el menú de la tienda?
+Show products?,¿Mostrar productos?
+Select category,Seleccionar categoría
+Search categories,Seleccionar categorías
+Out of stock, Sin stock
+No shipping required,Delivery no requerido
+Type / to see the available blocks, Escribir / para ver bloques disponibles
