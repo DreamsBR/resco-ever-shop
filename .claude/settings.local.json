@@ -15,7 +15,8 @@
       "Bash(npm ls:*)",
       "Bash(docker compose exec:*)",
       "Bash(docker compose build:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(powershell:*)"
     ]
   }
 }
