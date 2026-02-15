@@ -103,6 +103,10 @@ export const query = `
             url
             alt
           }
+          gallery {
+            url
+            alt
+          }
         }
         total
       }

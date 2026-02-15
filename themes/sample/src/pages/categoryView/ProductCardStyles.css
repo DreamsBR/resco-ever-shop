@@ -216,6 +216,40 @@ select[name="sort"] {
   background: var(--color-background);
 }
 
+/* Ensure the link takes full space for absolute positioned images */
+.product__list__image > a,
+.product__list__image .product-image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Primary Image - positioned absolute when has second image */
+.product__list__image .product-primary-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out !important;
+}
+
+.product__list__image .product-primary-image.has-second-image {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+
+/* Secondary Image - always absolute, hidden by default */
+.product__list__image .product-secondary-image {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out !important;
+}
+
 .product__list__image img,
 .product__list__image > a > img {
   width: 100% !important;

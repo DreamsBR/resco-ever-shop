@@ -20,16 +20,26 @@ interface ProductCardProps {
     inventory: { isInStock: boolean };
     image?: ProductImage;
     images?: ProductImage[];
+    gallery?: ProductImage[];
   };
 }
 
 export function ProductCard({ product }: ProductCardProps) {
   // Get primary image and second image for hover effect
   const primaryImage = product.image;
-  const secondImage = product.images && product.images.length > 1 ? product.images[1] : null;
+  // Try to get second image from gallery first, then from images array
+  const secondImage =
+    (product.gallery && product.gallery.length > 0)
+      ? product.gallery[0]  // gallery contains additional images (not the main one)
+      : (product.images && product.images.length > 1)
+        ? product.images[1]  // images includes main + additional, so use index 1
+        : null;
+
+  // Only apply hover effect if there's a second image
+  const hasSecondImage = !!secondImage;
 
   return (
-    <div className="product-card">
+    <div className={`product-card ${hasSecondImage ? 'has-hover-image' : ''}`}>
       {/* Product Image */}
       <div className="product-card__image">
         <a href={product.url}>
@@ -41,10 +51,10 @@ export function ProductCard({ product }: ProductCardProps) {
                 loading="lazy"
                 className="product-card__img-primary"
               />
-              {secondImage && (
+              {hasSecondImage && (
                 <img
-                  src={secondImage.url}
-                  alt={secondImage.alt || product.name}
+                  src={secondImage!.url}
+                  alt={secondImage!.alt || product.name}
                   loading="lazy"
                   className="product-card__img-secondary"
                 />
@@ -167,11 +177,12 @@ export function ProductCard({ product }: ProductCardProps) {
           z-index: 2;
         }
 
-        .product-card:hover .product-card__img-primary {
+        /* Only fade primary image when there IS a secondary image */
+        .product-card.has-hover-image:hover .product-card__img-primary {
           opacity: 0;
         }
 
-        .product-card:hover .product-card__img-secondary {
+        .product-card.has-hover-image:hover .product-card__img-secondary {
           opacity: 1;
         }
 

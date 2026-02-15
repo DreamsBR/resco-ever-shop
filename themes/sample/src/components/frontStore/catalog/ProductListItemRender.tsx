@@ -113,8 +113,8 @@ export const ProductListItemRender = ({
       onMouseLeave={() => setIsHovering(false)}
     >
       {/* Product Image - 320px height as per Pencil design with smooth transition */}
-      <div className="product__list__image overflow-hidden flex w-full justify-center relative">
-        <a href={product.url} className="w-full h-full">
+      <div className="product__list__image">
+        <a href={product.url} className="product-image-link">
           {/* Primary Image */}
           {product.image && (
             <Image
@@ -123,13 +123,9 @@ export const ProductListItemRender = ({
               width={imageWidth || 320}
               height={imageHeight || 320}
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="w-full h-full object-cover"
+              className={`product-primary-image ${secondImage ? 'has-second-image' : ''}`}
               style={{
                 opacity: isHovering && secondImage ? 0 : 1,
-                position: secondImage ? 'absolute' : 'relative',
-                top: 0,
-                left: 0,
-                transition: 'opacity 600ms ease-in-out, transform 500ms ease-in-out',
                 transform: isHovering ? 'scale(1.05)' : 'scale(1)'
               }}
             />
@@ -143,13 +139,9 @@ export const ProductListItemRender = ({
               width={imageWidth || 320}
               height={imageHeight || 320}
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="w-full h-full object-cover"
+              className="product-secondary-image"
               style={{
                 opacity: isHovering ? 1 : 0,
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                transition: 'opacity 600ms ease-in-out, transform 500ms ease-in-out',
                 transform: isHovering ? 'scale(1.05)' : 'scale(1)'
               }}
             />
