@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // Types for GraphQL data
 interface CategoryImage {
@@ -42,179 +42,168 @@ function useIntersectionObserver(options = {}) {
   return ref;
 }
 
-// ============ BANNER CAROUSEL SECTION ============
-interface Banner {
-  id: number;
-  title: string;
-  subtitle: string;
-  image: string;
-  icon: React.ReactNode;
-}
+// ============ HERO CAROUSEL DATA ============
+const heroSlides = [
+  {
+    id: 1,
+    title: "Calidad Premium en Cada Corte",
+    subtitle: "Seleccionamos los mejores cortes para que disfrutes del auténtico sabor",
+    image: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+  },
+  {
+    id: 2,
+    title: "Del Campo a Tu Mesa",
+    subtitle: "Ganado criado con los más altos estándares de bienestar animal",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+  },
+  {
+    id: 3,
+    title: "Tradición y Experiencia",
+    subtitle: "Más de 30 años ofreciendo las mejores carnes a familias como la tuya",
+    image: "https://images.unsplash.com/photo-1558030006-450675393462?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+  },
+  {
+    id: 4,
+    title: "El Sabor que Une Familias",
+    subtitle: "Momentos inolvidables alrededor de la mesa con nuestras carnes selectas",
+    image: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+  },
+  {
+    id: 5,
+    title: "Maestros Carniceros",
+    subtitle: "Expertos dedicados a ofrecerte cortes perfectos en cada visita",
+    image: "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+  }
+];
 
-function BannerCarousel() {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
+// ============ HERO CAROUSEL ============
+function HeroCarousel() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [imageTransitioning, setImageTransitioning] = useState(false);
+  const [textVisible, setTextVisible] = useState(true);
 
-  const banners: Banner[] = [
-    {
-      id: 1,
-      title: 'CORTES PREMIUM',
-      subtitle: 'La mejor carne para tu mesa',
-      image: 'https://images.unsplash.com/photo-1602470521006-aaea8b2fcc36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-14 h-14">
-          <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6s-7.56-2.54-8.5-6Z" />
-          <path d="M18 5a46.7 46.7 0 0 1-1.45 4.88M14.41 10.75a.57.57 0 0 1-.6.36.57.57 0 0 1-.52-.47.57.57 0 0 1 .36-.6c.47-.18.82-.64 1-.95a.57.57 0 0 1 .77-.25.57.57 0 0 1 .24.77c-.24.52-.7 1.05-1.24 1.14Z" />
-        </svg>
-      )
-    },
-    {
-      id: 2,
-      title: 'CALIDAD GARANTIZADA',
-      subtitle: 'Directo de los mejores ganaderos',
-      image: 'https://images.unsplash.com/photo-1759150595639-d128196ab6b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-14 h-14">
-          <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
-        </svg>
-      )
-    },
-    {
-      id: 3,
-      title: 'TRADICIÓN ARTESANAL',
-      subtitle: 'Maduración perfecta en cada corte',
-      image: 'https://images.unsplash.com/photo-1600180786608-28d06391d25c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-14 h-14">
-          <circle cx="12" cy="8" r="6" />
-          <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
-        </svg>
-      )
-    },
-    {
-      id: 4,
-      title: 'SABOR INCOMPARABLE',
-      subtitle: 'Para paladares exigentes',
-      image: 'https://images.unsplash.com/photo-1708388464912-d4ad82dca990?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-14 h-14">
-          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-        </svg>
-      )
-    },
-    {
-      id: 5,
-      title: 'FRESCURA DIARIA',
-      subtitle: 'Productos frescos cada día',
-      image: 'https://images.unsplash.com/photo-1584448327102-5617ccc71ae9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-14 h-14">
-          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-        </svg>
-      )
-    },
-    {
-      id: 6,
-      title: 'VARIEDAD EXCLUSIVA',
-      subtitle: 'Encuentra el corte perfecto',
-      image: 'https://images.unsplash.com/photo-1611038333075-2efd28705f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-14 h-14">
-          <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
-        </svg>
-      )
-    }
-  ];
-
-  // Navigation functions
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % banners.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + banners.length) % banners.length);
-  };
-
-  // Auto-advance carousel every 8 seconds
-  React.useEffect(() => {
+  // Auto-rotate every 5 seconds
+  useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % banners.length);
-    }, 8000);
+      // Fade out text first
+      setTextVisible(false);
+
+      // Then transition image
+      setTimeout(() => {
+        setImageTransitioning(true);
+      }, 200);
+
+      // Change slide
+      setTimeout(() => {
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+        setImageTransitioning(false);
+      }, 600);
+
+      // Fade in text
+      setTimeout(() => {
+        setTextVisible(true);
+      }, 800);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [banners.length]);
+  }, []);
+
+  const goToSlide = (index: number) => {
+    if (index !== currentSlide) {
+      setTextVisible(false);
+      setTimeout(() => setImageTransitioning(true), 200);
+      setTimeout(() => {
+        setCurrentSlide(index);
+        setImageTransitioning(false);
+      }, 600);
+      setTimeout(() => setTextVisible(true), 800);
+    }
+  };
+
+  const goToPrev = () => {
+    setTextVisible(false);
+    setTimeout(() => setImageTransitioning(true), 200);
+    setTimeout(() => {
+      setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+      setImageTransitioning(false);
+    }, 600);
+    setTimeout(() => setTextVisible(true), 800);
+  };
+
+  const goToNext = () => {
+    setTextVisible(false);
+    setTimeout(() => setImageTransitioning(true), 200);
+    setTimeout(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+      setImageTransitioning(false);
+    }, 600);
+    setTimeout(() => setTextVisible(true), 800);
+  };
+
+  const slide = heroSlides[currentSlide];
 
   return (
-    <section className="relative w-full h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] overflow-hidden mt-16 sm:mt-20">
-      {/* Banners */}
-      {banners.map((banner, index) => (
-        <div
-          key={banner.id}
-          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
-          style={{
-            backgroundImage: `url('${banner.image}')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        >
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/30" />
-
-          {/* Content */}
-          <div className="relative h-full flex flex-col items-center justify-center gap-6 px-4">
-            {/* Icon */}
-            <div className="text-[#f0ece9] animate-fade-up">
-              {banner.icon}
-            </div>
-
-            {/* Title */}
-            <h1 className="text-[#f0ece9] font-['Playfair_Display'] text-4xl sm:text-5xl lg:text-7xl font-bold text-center tracking-[2px] animate-fade-up delay-1">
-              {banner.title}
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-[#f0ece9] font-['Manrope'] text-lg sm:text-xl lg:text-2xl text-center opacity-90 animate-fade-up delay-2">
-              {banner.subtitle}
-            </p>
-          </div>
-        </div>
-      ))}
-
-      {/* Previous Arrow */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/20 hover:bg-black/40 text-[#f0ece9] p-3 sm:p-4 rounded-full transition-all duration-300 backdrop-blur-sm"
-        aria-label="Anterior banner"
+    <section className="relative w-full h-[100vh] min-h-[600px] max-h-[900px] overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div
+        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out ${imageTransitioning ? 'opacity-0' : 'opacity-100'}`}
+        style={{ backgroundImage: `url('${slide.image}')` }}
       >
-        <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <path d="M15 18l-6-6 6-6" />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-8">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1
+            className={`text-white font-['Playfair_Display'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6 transition-all duration-500 ease-out ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+          >
+            {slide.title}
+          </h1>
+          <p
+            className={`text-white/80 font-['Manrope'] text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mb-8 transition-all duration-500 ease-out delay-100 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+          >
+            {slide.subtitle}
+          </p>
+          <a
+            href="/productos"
+            className={`inline-flex bg-[#8B0000] text-white font-['Manrope'] text-sm font-semibold tracking-[1px] px-8 py-4 hover:bg-[#a00000] transition-all duration-500 ease-out delay-200 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+          >
+            VER PRODUCTOS
+          </a>
+        </div>
+      </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={goToPrev}
+        className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center transition-colors"
+        aria-label="Anterior"
+      >
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
-
-      {/* Next Arrow */}
       <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/20 hover:bg-black/40 text-[#f0ece9] p-3 sm:p-4 rounded-full transition-all duration-300 backdrop-blur-sm"
-        aria-label="Siguiente banner"
+        onClick={goToNext}
+        className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center transition-colors"
+        aria-label="Siguiente"
       >
-        <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <path d="M9 18l6-6-6-6" />
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
         </svg>
       </button>
 
       {/* Dots Navigation */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-3 z-10">
-        {banners.map((_, index) => (
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 bg-black/30 px-4 py-2 rounded-full">
+        {heroSlides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`transition-all duration-300 rounded-full ${
-              index === currentSlide
-                ? 'w-3.5 h-3.5 bg-[#f0ece9]'
-                : 'w-3 h-3 bg-[#f0ece9]/30 hover:bg-[#f0ece9]/50'
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              index === currentSlide ? 'bg-white scale-110' : 'bg-white/50 hover:bg-white/70'
             }`}
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={`Ir a slide ${index + 1}`}
           />
         ))}
       </div>
@@ -476,7 +465,7 @@ function ContactSection() {
             <svg className="w-[18px] h-[18px] text-[#647257]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
-            <span className="text-[#647257] font-['Manrope'] text-sm">+57 300 123 4567</span>
+            <span className="text-[#647257] font-['Manrope'] text-sm">+51 961 109 825</span>
           </div>
           <div className="flex items-center gap-3">
             <svg className="w-[18px] h-[18px] text-[#647257]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -490,7 +479,7 @@ function ContactSection() {
               <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
               <circle cx="12" cy="10" r="3" />
             </svg>
-            <span className="text-[#647257] font-['Manrope'] text-sm">Bogotá, Colombia</span>
+            <span className="text-[#647257] font-['Manrope'] text-sm">Lima, Perú</span>
           </div>
         </div>
 
@@ -641,7 +630,7 @@ export default function LandingPage({ categories }: LandingPageProps) {
   return (
     <div className="w-full max-w-[1920px] mx-auto overflow-hidden">
       <AnimationStyles />
-      <BannerCarousel />
+      <HeroCarousel />
       <CategoriesSection categories={categoryList} />
       <section id="nuestra-carne">
         <NuestraCarneSection />

@@ -1,23 +1,11 @@
 {
-  "version": "2.6",
+  "version": "2.7",
   "children": [
     {
       "type": "frame",
-      "id": "bi8Au",
-      "x": 0,
-      "y": 0,
-      "name": "Frame",
-      "clip": true,
-      "width": 800,
-      "height": 600,
-      "fill": "#FFFFFF",
-      "layout": "none"
-    },
-    {
-      "type": "frame",
       "id": "2k258",
-      "x": 0,
-      "y": 0,
+      "x": -20,
+      "y": 3,
       "name": "Maria's Meat Landing Page",
       "width": 1440,
       "fill": "#f0ece9",
@@ -147,78 +135,219 @@
           "type": "frame",
           "id": "YYCTA",
           "name": "Hero Section",
+          "clip": true,
           "width": "fill_container",
-          "height": 600,
-          "gap": 60,
-          "padding": 80,
-          "alignItems": "center",
+          "height": 800,
+          "fill": "#1a0a0a",
+          "layout": "none",
           "children": [
             {
               "type": "frame",
-              "id": "GxcLt",
-              "name": "heroContent",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 32,
+              "id": "LeARm",
+              "x": 0,
+              "y": 0,
+              "name": "Slide 1 - Active",
+              "width": 1440,
+              "height": 800,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1770506415629.png",
+                "mode": "fill"
+              },
+              "layout": "none",
               "children": [
                 {
-                  "type": "text",
-                  "id": "sQC5f",
-                  "name": "heroTagline",
-                  "fill": "#647257",
-                  "content": "CALIDAD PREMIUM",
-                  "fontFamily": "Manrope",
-                  "fontSize": 12,
-                  "fontWeight": "600",
-                  "letterSpacing": 3
-                },
-                {
-                  "type": "text",
-                  "id": "5FEPQ",
-                  "name": "heroTitle",
-                  "fill": "#647257",
-                  "textGrowth": "fixed-width",
-                  "width": 500,
-                  "content": "Carnes de Alta\nCalidad para\nPaladares Exigentes",
-                  "lineHeight": 1.1,
-                  "fontFamily": "Playfair Display",
-                  "fontSize": 56,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "YCpiG",
-                  "name": "heroDesc",
-                  "fill": "#7a8a6d",
-                  "textGrowth": "fixed-width",
-                  "width": 450,
-                  "content": "Distribuidora de carnes premium para restaurantes y hogares de alto estándar. Seleccionamos los mejores cortes con dedicación artesanal.",
-                  "lineHeight": 1.6,
-                  "fontFamily": "Manrope",
-                  "fontSize": 16,
-                  "fontWeight": "normal"
-                },
-                {
                   "type": "frame",
-                  "id": "3J74x",
-                  "name": "heroCta",
-                  "fill": "#647257",
-                  "gap": 16,
-                  "padding": [
-                    16,
-                    32
-                  ],
+                  "id": "LPnqG",
+                  "x": 270,
+                  "y": 320,
+                  "name": "textContainer1",
+                  "width": 900,
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 40,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "text",
-                      "id": "IJedT",
-                      "name": "heroCtaText",
-                      "fill": "#f0ece9",
-                      "content": "VER PRODUCTOS",
-                      "fontFamily": "Manrope",
+                      "id": "NmMku",
+                      "name": "headline1",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width",
+                      "width": 900,
+                      "content": "Calidad Premium en Cada Corte",
+                      "textAlign": "center",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 52,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Zjq5A",
+                      "name": "subline1",
+                      "fill": "#FFFFFFCC",
+                      "textGrowth": "fixed-width",
+                      "width": 900,
+                      "content": "Seleccionamos los mejores cortes para que disfrutes del auténtico sabor",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EcJLM",
+                  "x": 0,
+                  "y": 0,
+                  "name": "overlay1",
+                  "width": 1440,
+                  "height": 800,
+                  "fill": "#00000066"
+                },
+                {
+                  "type": "frame",
+                  "id": "Hir6D",
+                  "x": 660,
+                  "y": 740,
+                  "name": "Navigation Dots",
+                  "fill": "#00000040",
+                  "cornerRadius": 20,
+                  "gap": 12,
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "dTVKC",
+                      "name": "dot1",
+                      "fill": "#FFFFFF",
+                      "width": 12,
+                      "height": 12
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "s6vzw",
+                      "name": "dot2",
+                      "fill": "#FFFFFF60",
+                      "width": 12,
+                      "height": 12
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "PNEsv",
+                      "name": "dot3",
+                      "fill": "#FFFFFF60",
+                      "width": 12,
+                      "height": 12
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "hBcin",
+                      "name": "dot4",
+                      "fill": "#FFFFFF60",
+                      "width": 12,
+                      "height": 12
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "NHUiS",
+                      "name": "dot5",
+                      "fill": "#FFFFFF60",
+                      "width": 12,
+                      "height": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "cmLnl",
+                  "x": 30,
+                  "y": 375,
+                  "name": "Arrow Left",
+                  "width": 50,
+                  "height": 50,
+                  "fill": "#00000060",
+                  "cornerRadius": 25,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "lTznI",
+                      "name": "iconLeft",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "chevron-left",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KWMZo",
+                  "x": 1360,
+                  "y": 375,
+                  "name": "Arrow Right",
+                  "width": 50,
+                  "height": 50,
+                  "fill": "#00000060",
+                  "cornerRadius": 25,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "OLxCJ",
+                      "name": "iconRight",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "6JBha",
+                  "x": 1260,
+                  "y": 20,
+                  "name": "Auto Timer",
+                  "enabled": false,
+                  "fill": "#8B0000",
+                  "cornerRadius": 6,
+                  "gap": 8,
+                  "padding": [
+                    6,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "7EsAH",
+                      "name": "timerIcon",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "timer",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    },
+                    {
+                      "type": "text",
+                      "id": "4fUJi",
+                      "name": "timerText",
+                      "fill": "#FFFFFF",
+                      "content": "Auto: 2 seg",
+                      "fontFamily": "Inter",
                       "fontSize": 12,
-                      "fontWeight": "600",
-                      "letterSpacing": 1
+                      "fontWeight": "medium"
                     }
                   ]
                 }
@@ -226,22 +355,367 @@
             },
             {
               "type": "frame",
-              "id": "4gIua",
-              "name": "Hero Image",
-              "metadata": {
-                "type": "unsplash",
-                "username": "sergeykotenev",
-                "link": "https://unsplash.com/@sergeykotenev",
-                "author": "Sergey Kotenev"
-              },
-              "width": 550,
-              "height": 450,
+              "id": "nET5R",
+              "x": 80,
+              "y": 830,
+              "name": "Slide 2",
+              "enabled": false,
+              "width": 340,
+              "height": 190,
               "fill": {
                 "type": "image",
                 "enabled": true,
-                "url": "https://images.unsplash.com/photo-1690983323501-66dd0049181f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAwMDg4MTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                "url": "./images/generated-1770506440782.png",
                 "mode": "fill"
-              }
+              },
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "7JwRA",
+                  "x": 0,
+                  "y": 0,
+                  "name": "overlay2",
+                  "width": 1440,
+                  "height": 800,
+                  "fill": "#00000066"
+                },
+                {
+                  "type": "frame",
+                  "id": "W9Xyn",
+                  "x": 370,
+                  "y": 300,
+                  "name": "textBox2",
+                  "enabled": false,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 40,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YhlKL",
+                      "name": "head2",
+                      "fill": "#FFFFFF",
+                      "content": "Del Campo a Tu Mesa",
+                      "textAlign": "center",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 56,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "0WTTL",
+                      "name": "sub2",
+                      "fill": "#FFFFFFCC",
+                      "textGrowth": "fixed-width",
+                      "width": 600,
+                      "content": "Ganado criado con los más altos estándares de bienestar animal",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "SybFP",
+                  "x": 0,
+                  "y": 150,
+                  "name": "label2",
+                  "width": 340,
+                  "height": 40,
+                  "fill": "#00000099",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sWfmK",
+                      "name": "labelText2",
+                      "fill": "#FFFFFF",
+                      "content": "Del Campo a Tu Mesa",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "semibold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Mcvh0",
+              "x": 440,
+              "y": 830,
+              "name": "Slide 3",
+              "enabled": false,
+              "width": 340,
+              "height": 190,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1770506455473.png",
+                "mode": "fill"
+              },
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wup2E",
+                  "x": 0,
+                  "y": 0,
+                  "name": "overlay3",
+                  "width": 1440,
+                  "height": 800,
+                  "fill": "#00000066"
+                },
+                {
+                  "type": "frame",
+                  "id": "IY31j",
+                  "x": 350,
+                  "y": 300,
+                  "name": "textBox3",
+                  "enabled": false,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 40,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "v36FK",
+                      "name": "head3",
+                      "fill": "#FFFFFF",
+                      "content": "Tradición y Experiencia",
+                      "textAlign": "center",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 56,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oYbCR",
+                      "name": "sub3",
+                      "fill": "#FFFFFFCC",
+                      "textGrowth": "fixed-width",
+                      "width": 650,
+                      "content": "Más de 30 años ofreciendo las mejores carnes a familias como la tuya",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ddCB6",
+                  "x": 0,
+                  "y": 150,
+                  "name": "label3",
+                  "width": 340,
+                  "height": 40,
+                  "fill": "#00000099",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "u9z0x",
+                      "name": "labelText3",
+                      "fill": "#FFFFFF",
+                      "content": "Tradición y Experiencia",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "semibold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kD6TF",
+              "x": 800,
+              "y": 830,
+              "name": "Slide 4",
+              "enabled": false,
+              "width": 340,
+              "height": 190,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1770506468961.png",
+                "mode": "fill"
+              },
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "QSFB1",
+                  "x": 0,
+                  "y": 0,
+                  "name": "overlay4",
+                  "width": 1440,
+                  "height": 800,
+                  "fill": "#00000066"
+                },
+                {
+                  "type": "frame",
+                  "id": "YmmB1",
+                  "x": 350,
+                  "y": 300,
+                  "name": "textBox4",
+                  "enabled": false,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 40,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mvVrF",
+                      "name": "head4",
+                      "fill": "#FFFFFF",
+                      "content": "El Sabor que Une Familias",
+                      "textAlign": "center",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 56,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "RNaBe",
+                      "name": "sub4",
+                      "fill": "#FFFFFFCC",
+                      "textGrowth": "fixed-width",
+                      "width": 650,
+                      "content": "Momentos inolvidables alrededor de la mesa con nuestras carnes selectas",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HbM66",
+                  "x": 0,
+                  "y": 150,
+                  "name": "label4",
+                  "width": 340,
+                  "height": 40,
+                  "fill": "#00000099",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dPQUY",
+                      "name": "labelText4",
+                      "fill": "#FFFFFF",
+                      "content": "El Sabor que Une Familias",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "semibold"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UPUF0",
+              "x": 1160,
+              "y": 830,
+              "name": "Slide 5",
+              "enabled": false,
+              "width": 340,
+              "height": 190,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1770506482736.png",
+                "mode": "fill"
+              },
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "3xIT7",
+                  "x": 0,
+                  "y": 0,
+                  "name": "overlay5",
+                  "width": 1440,
+                  "height": 800,
+                  "fill": "#00000066"
+                },
+                {
+                  "type": "frame",
+                  "id": "tu77s",
+                  "x": 350,
+                  "y": 300,
+                  "name": "textBox5",
+                  "enabled": false,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 40,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mDYsJ",
+                      "name": "head5",
+                      "fill": "#FFFFFF",
+                      "content": "Maestros Carniceros",
+                      "textAlign": "center",
+                      "fontFamily": "Playfair Display",
+                      "fontSize": 56,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Kwx67",
+                      "name": "sub5",
+                      "fill": "#FFFFFFCC",
+                      "textGrowth": "fixed-width",
+                      "width": 650,
+                      "content": "Expertos dedicados a ofrecerte cortes perfectos en cada visita",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "61ZAZ",
+                  "x": 0,
+                  "y": 150,
+                  "name": "label5",
+                  "width": 340,
+                  "height": 40,
+                  "fill": "#00000099",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "f6fIi",
+                      "name": "labelText5",
+                      "fill": "#FFFFFF",
+                      "content": "Maestros Carniceros",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "semibold"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -1540,8 +2014,8 @@
     {
       "type": "frame",
       "id": "9OFyL",
-      "x": 1664,
-      "y": 87,
+      "x": 2313,
+      "y": -768,
       "name": "Component/Product Card",
       "width": 280,
       "layout": "vertical",

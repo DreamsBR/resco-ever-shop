@@ -10,9 +10,13 @@
       "Bash(ping:*)",
       "Bash(netstat:*)",
       "Bash(findstr:*)",
-      "Bash(echo:*)",
-      "Bash(sudo grep:*)",
-      "Bash(NODE_TLS_REJECT_UNAUTHORIZED=0 npm run setup:*)"
+      "Bash(del \"c:\\\\Users\\\\Marcos\\\\Documents\\\\NewEvershop\\\\my-evershop-app\\\\themes\\\\sample\\\\src\\\\modules\\\\catalog\\\\components\\\\CategoryProducts.tsx\")",
+      "Bash(docker compose up:*)",
+      "Bash(npm ls:*)",
+      "Bash(docker compose exec:*)",
+      "Bash(docker compose build:*)",
+      "Bash(curl:*)",
+      "Bash(powershell:*)"
     ]
   }
 }
