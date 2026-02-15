@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // Types for GraphQL data
 interface CategoryImage {
@@ -42,47 +42,170 @@ function useIntersectionObserver(options = {}) {
   return ref;
 }
 
-// ============ HERO SECTION ============
-function HeroSection() {
-  const ref = useIntersectionObserver();
+// ============ HERO CAROUSEL DATA ============
+const heroSlides = [
+  {
+    id: 1,
+    title: "Calidad Premium en Cada Corte",
+    subtitle: "Seleccionamos los mejores cortes para que disfrutes del auténtico sabor",
+    image: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+  },
+  {
+    id: 2,
+    title: "Del Campo a Tu Mesa",
+    subtitle: "Ganado criado con los más altos estándares de bienestar animal",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+  },
+  {
+    id: 3,
+    title: "Tradición y Experiencia",
+    subtitle: "Más de 30 años ofreciendo las mejores carnes a familias como la tuya",
+    image: "https://images.unsplash.com/photo-1558030006-450675393462?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+  },
+  {
+    id: 4,
+    title: "El Sabor que Une Familias",
+    subtitle: "Momentos inolvidables alrededor de la mesa con nuestras carnes selectas",
+    image: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+  },
+  {
+    id: 5,
+    title: "Maestros Carniceros",
+    subtitle: "Expertos dedicados a ofrecerte cortes perfectos en cada visita",
+    image: "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+  }
+];
+
+// ============ HERO CAROUSEL ============
+function HeroCarousel() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [imageTransitioning, setImageTransitioning] = useState(false);
+  const [textVisible, setTextVisible] = useState(true);
+
+  // Auto-rotate every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Fade out text first
+      setTextVisible(false);
+
+      // Then transition image
+      setTimeout(() => {
+        setImageTransitioning(true);
+      }, 200);
+
+      // Change slide
+      setTimeout(() => {
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+        setImageTransitioning(false);
+      }, 600);
+
+      // Fade in text
+      setTimeout(() => {
+        setTextVisible(true);
+      }, 800);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const goToSlide = (index: number) => {
+    if (index !== currentSlide) {
+      setTextVisible(false);
+      setTimeout(() => setImageTransitioning(true), 200);
+      setTimeout(() => {
+        setCurrentSlide(index);
+        setImageTransitioning(false);
+      }, 600);
+      setTimeout(() => setTextVisible(true), 800);
+    }
+  };
+
+  const goToPrev = () => {
+    setTextVisible(false);
+    setTimeout(() => setImageTransitioning(true), 200);
+    setTimeout(() => {
+      setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+      setImageTransitioning(false);
+    }, 600);
+    setTimeout(() => setTextVisible(true), 800);
+  };
+
+  const goToNext = () => {
+    setTextVisible(false);
+    setTimeout(() => setImageTransitioning(true), 200);
+    setTimeout(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+      setImageTransitioning(false);
+    }, 600);
+    setTimeout(() => setTextVisible(true), 800);
+  };
+
+  const slide = heroSlides[currentSlide];
 
   return (
-    <section className="bg-[#f0ece9] px-4 sm:px-8 lg:px-20 py-12 lg:py-20">
+    <section className="relative w-full h-[100vh] min-h-[600px] max-h-[900px] overflow-hidden">
+      {/* Background Image with Overlay */}
       <div
-        ref={ref}
-        className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-[60px] animate-section"
+        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out ${imageTransitioning ? 'opacity-0' : 'opacity-100'}`}
+        style={{ backgroundImage: `url('${slide.image}')` }}
       >
-        {/* Hero Content */}
-        <div className="flex flex-col gap-6 lg:gap-8 flex-1 text-center lg:text-left">
-          <span className="text-[#647257] font-['Manrope'] text-xs font-semibold tracking-[3px] animate-fade-up delay-1">
-            CALIDAD PREMIUM
-          </span>
-          <h1 className="text-[#647257] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-[56px] leading-[1.1] animate-fade-up delay-2">
-            Carnes de Alta
-            <br />
-            Calidad para
-            <br />
-            Paladares Exigentes
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-8">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1
+            className={`text-white font-['Playfair_Display'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6 transition-all duration-500 ease-out ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+          >
+            {slide.title}
           </h1>
-          <p className="text-[#7a8a6d] font-['Manrope'] text-sm lg:text-base leading-[1.6] max-w-[450px] mx-auto lg:mx-0 animate-fade-up delay-3">
-            Distribuidora de carnes premium para restaurantes y hogares de alto estándar.
-            Seleccionamos los mejores cortes con dedicación artesanal.
+          <p
+            className={`text-white/80 font-['Manrope'] text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mb-8 transition-all duration-500 ease-out delay-100 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+          >
+            {slide.subtitle}
           </p>
           <a
             href="/productos"
-            className="inline-flex justify-center bg-[#647257] text-[#f0ece9] font-['Manrope'] text-xs font-semibold tracking-[1px] px-8 py-4 w-fit mx-auto lg:mx-0 hover:bg-[#556348] transition-colors animate-fade-up delay-4"
+            className={`inline-flex bg-[#8B0000] text-white font-['Manrope'] text-sm font-semibold tracking-[1px] px-8 py-4 hover:bg-[#a00000] transition-all duration-500 ease-out delay-200 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
           >
             VER PRODUCTOS
           </a>
         </div>
+      </div>
 
-        {/* Hero Image */}
-        <div
-          className="w-full lg:w-[550px] h-[300px] sm:h-[400px] lg:h-[450px] bg-cover bg-center animate-fade-left delay-2"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1690983323501-66dd0049181f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080')`
-          }}
-        />
+      {/* Navigation Arrows */}
+      <button
+        onClick={goToPrev}
+        className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center transition-colors"
+        aria-label="Anterior"
+      >
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center transition-colors"
+        aria-label="Siguiente"
+      >
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      {/* Dots Navigation */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 bg-black/30 px-4 py-2 rounded-full">
+        {heroSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              index === currentSlide ? 'bg-white scale-110' : 'bg-white/50 hover:bg-white/70'
+            }`}
+            aria-label={`Ir a slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );
@@ -507,7 +630,7 @@ export default function LandingPage({ categories }: LandingPageProps) {
   return (
     <div className="w-full max-w-[1920px] mx-auto overflow-hidden">
       <AnimationStyles />
-      <HeroSection />
+      <HeroCarousel />
       <CategoriesSection categories={categoryList} />
       <section id="nuestra-carne">
         <NuestraCarneSection />
