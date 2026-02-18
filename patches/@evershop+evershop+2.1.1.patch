@@ -1,3 +1,74 @@
+diff --git a/node_modules/@evershop/evershop/dist/components/admin/FormButtons.js b/node_modules/@evershop/evershop/dist/components/admin/FormButtons.js
+index d258dac..9826791 100644
+--- a/node_modules/@evershop/evershop/dist/components/admin/FormButtons.js
++++ b/node_modules/@evershop/evershop/dist/components/admin/FormButtons.js
+@@ -1,4 +1,5 @@
+ import { Button } from '@components/common/ui/Button.js';
++import { _ } from '@evershop/evershop/lib/locale/translate/_';
+ import React from 'react';
+ import { useFormContext } from 'react-hook-form';
+ const FormButtons = ({ cancelUrl, formId }) => {
+@@ -6,10 +7,10 @@ const FormButtons = ({ cancelUrl, formId }) => {
+     return (React.createElement("div", { className: "form-submit-button flex border-t border-border mt-4 pt-4 justify-between" },
+         React.createElement(Button, { variant: "destructive", onClick: () => {
+                 window.location.href = cancelUrl;
+-            } }, "Cancel"),
++            } }, _('Cancel')),
+         React.createElement(Button, { onClick: () => {
+                 document.getElementById(formId).dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+-            }, isLoading: isSubmitting }, "Save")));
++            }, isLoading: isSubmitting }, _('Save'))));
+ };
+ export { FormButtons };
+ //# sourceMappingURL=FormButtons.js.map
+\ No newline at end of file
+diff --git a/node_modules/@evershop/evershop/dist/components/admin/grid/GridPagination.js b/node_modules/@evershop/evershop/dist/components/admin/grid/GridPagination.js
+index 9e5be7f..cb58e1e 100644
+--- a/node_modules/@evershop/evershop/dist/components/admin/grid/GridPagination.js
++++ b/node_modules/@evershop/evershop/dist/components/admin/grid/GridPagination.js
+@@ -2,6 +2,7 @@ import { Button } from '@components/common/ui/Button.js';
+ import { ButtonGroup } from '@components/common/ui/ButtonGroup.js';
+ import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@components/common/ui/Pagination.js';
+ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@components/common/ui/Select.js';
++import { _ } from '@evershop/evershop/lib/locale/translate/_';
+ import React from 'react';
+ export function GridPagination({ total, limit, page }) {
+     const limitInput = React.useRef(null);
+@@ -58,7 +59,7 @@ export function GridPagination({ total, limit, page }) {
+     return (React.createElement("div", { className: "pagination flex w-full mt-3" },
+         React.createElement("div", { className: "flex justify-between w-full space-x-2" },
+             React.createElement(ButtonGroup, null,
+-                React.createElement(Button, { variant: 'outline' }, "Show"),
++                React.createElement(Button, { variant: 'outline' }, _('Show')),
+                 React.createElement(Select, { value: limit.toString(), onValueChange: (value) => {
+                         const url = new URL(window.location.href);
+                         url.searchParams.set('limit', (value === null || value === void 0 ? void 0 : value.toString()) || '10');
+diff --git a/node_modules/@evershop/evershop/dist/components/common/ui/Pagination.js b/node_modules/@evershop/evershop/dist/components/common/ui/Pagination.js
+index b2e5401..dc606c3 100644
+--- a/node_modules/@evershop/evershop/dist/components/common/ui/Pagination.js
++++ b/node_modules/@evershop/evershop/dist/components/common/ui/Pagination.js
+@@ -2,6 +2,7 @@
+ import { Button } from '@components/common/ui/Button.js';
+ import { cn } from '@evershop/evershop/lib/util/cn';
+ import { ChevronLeftIcon, ChevronRightIcon, MoreHorizontalIcon } from 'lucide-react';
++import { _ } from '@evershop/evershop/lib/locale/translate/_';
+ import * as React from 'react';
+ function Pagination({ className, ...props }) {
+     return (React.createElement("nav", { role: "navigation", "aria-label": "pagination", "data-slot": "pagination", className: cn('mx-auto flex w-full justify-center', className), ...props }));
+@@ -18,11 +19,11 @@ function PaginationLink({ className, isActive, size = 'icon', ...props }) {
+ function PaginationPrevious({ className, ...props }) {
+     return (React.createElement(PaginationLink, { "aria-label": "Go to previous page", size: "default", className: cn('pl-2!', className), ...props },
+         React.createElement(ChevronLeftIcon, { "data-icon": "inline-start" }),
+-        React.createElement("span", { className: "hidden sm:block" }, "Previous")));
++        React.createElement("span", { className: "hidden sm:block" }, _('Previous'))));
+ }
+ function PaginationNext({ className, ...props }) {
+     return (React.createElement(PaginationLink, { "aria-label": "Go to next page", size: "default", className: cn('pr-2!', className), ...props },
+-        React.createElement("span", { className: "hidden sm:block" }, "Next"),
++        React.createElement("span", { className: "hidden sm:block" }, _('Next')),
+         React.createElement(ChevronRightIcon, { "data-icon": "inline-end" })));
+ }
+ function PaginationEllipsis({ className, ...props }) {
 diff --git a/node_modules/@evershop/evershop/dist/lib/webpack/plugins/InjectTailwindSources.js b/node_modules/@evershop/evershop/dist/lib/webpack/plugins/InjectTailwindSources.js
 index 5e0b661..53223c3 100644
 --- a/node_modules/@evershop/evershop/dist/lib/webpack/plugins/InjectTailwindSources.js
@@ -15,11 +86,91 @@ index 5e0b661..53223c3 100644
          }
      });
 diff --git a/node_modules/@evershop/evershop/dist/modules/base/pages/admin/all/FormCss.js b/node_modules/@evershop/evershop/dist/modules/base/pages/admin/all/FormCss.js
-index c489b37..c38cfc4 100644
+index c489b37..bbbacea 100644
 --- a/node_modules/@evershop/evershop/dist/modules/base/pages/admin/all/FormCss.js
 +++ b/node_modules/@evershop/evershop/dist/modules/base/pages/admin/all/FormCss.js
-@@ -1,3 +1,4 @@
+@@ -1,3 +1,5 @@
++import './form.scss';
 +import './form.scss';
  export default function FormCss() {
      return null;
  }
+diff --git a/node_modules/@evershop/evershop/src/components/admin/FormButtons.tsx b/node_modules/@evershop/evershop/src/components/admin/FormButtons.tsx
+index 8b8e93f..4693a7f 100644
+--- a/node_modules/@evershop/evershop/src/components/admin/FormButtons.tsx
++++ b/node_modules/@evershop/evershop/src/components/admin/FormButtons.tsx
+@@ -1,4 +1,5 @@
+ import { Button } from '@components/common/ui/Button.js';
++import { _ } from '@evershop/evershop/lib/locale/translate/_';
+ import React from 'react';
+ import { useFormContext } from 'react-hook-form';
+ 
+@@ -18,7 +19,7 @@ const FormButtons: React.FC<{
+           window.location.href = cancelUrl;
+         }}
+       >
+-        Cancel
++        {_('Cancel')}
+       </Button>
+       <Button
+         onClick={() => {
+@@ -28,7 +29,7 @@ const FormButtons: React.FC<{
+         }}
+         isLoading={isSubmitting}
+       >
+-        Save
++        {_('Save')}
+       </Button>
+     </div>
+   );
+diff --git a/node_modules/@evershop/evershop/src/components/admin/grid/GridPagination.tsx b/node_modules/@evershop/evershop/src/components/admin/grid/GridPagination.tsx
+index cf4ed7e..6b87542 100644
+--- a/node_modules/@evershop/evershop/src/components/admin/grid/GridPagination.tsx
++++ b/node_modules/@evershop/evershop/src/components/admin/grid/GridPagination.tsx
+@@ -18,6 +18,7 @@ import {
+   SelectTrigger,
+   SelectValue
+ } from '@components/common/ui/Select.js';
++import { _ } from '@evershop/evershop/lib/locale/translate/_';
+ import React from 'react';
+ 
+ export interface GridPaginationProps {
+@@ -83,7 +84,7 @@ export function GridPagination({ total, limit, page }: GridPaginationProps) {
+     <div className="pagination flex w-full mt-3">
+       <div className="flex justify-between w-full space-x-2">
+         <ButtonGroup>
+-          <Button variant={'outline'}>Show</Button>
++          <Button variant={'outline'}>{_('Show')}</Button>
+           <Select
+             value={limit.toString()}
+             onValueChange={(value) => {
+diff --git a/node_modules/@evershop/evershop/src/components/common/ui/Pagination.tsx b/node_modules/@evershop/evershop/src/components/common/ui/Pagination.tsx
+index 3e187c5..b14593b 100644
+--- a/node_modules/@evershop/evershop/src/components/common/ui/Pagination.tsx
++++ b/node_modules/@evershop/evershop/src/components/common/ui/Pagination.tsx
+@@ -6,6 +6,7 @@ import {
+   ChevronRightIcon,
+   MoreHorizontalIcon
+ } from 'lucide-react';
++import { _ } from '@evershop/evershop/lib/locale/translate/_';
+ import * as React from 'react';
+ 
+ function Pagination({ className, ...props }: React.ComponentProps<'nav'>) {
+@@ -78,7 +79,7 @@ function PaginationPrevious({
+       {...props}
+     >
+       <ChevronLeftIcon data-icon="inline-start" />
+-      <span className="hidden sm:block">Previous</span>
++      <span className="hidden sm:block">{_('Previous')}</span>
+     </PaginationLink>
+   );
+ }
+@@ -94,7 +95,7 @@ function PaginationNext({
+       className={cn('pr-2!', className)}
+       {...props}
+     >
+-      <span className="hidden sm:block">Next</span>
++      <span className="hidden sm:block">{_('Next')}</span>
+       <ChevronRightIcon data-icon="inline-end" />
+     </PaginationLink>
+   );

@@ -1,62 +1,158 @@
-Total,Total
-Order,Pedido
-Sku,SKU
-Continue to shipping,Continuar al envío
-Continue shopping,Seguir comprando
-Continue Shopping,Seguir Comprando
-CONTINUE SHOPPING,SEGUIR COMPRANDO
-Shopping cart,Carrito de compras
-Product,Producto
-Price,Precio
-Quantity,Cantidad
-Remove,Eliminar
-Qty,Cant
-Sub total,Subtotal
-Discount($coupon),Descuento($cupón)
-Order summary,Resumen del pedido
-Taxes and shipping calculated at checkout,Impuestos y envío calculados al finalizar la compra
-CHECKOUT,FINALIZAR COMPRA
-Change,Cambiar
-Payment Method,Método de pago
-Shipping Address,Dirección de envío
-Shipping Method,Método de envío
-No payment methods available,No hay métodos de pago disponibles
-Place Order,Realizar pedido
-My billing address is same as shipping address,Mi dirección de facturación es la misma que la de envío
-$count items,$count artículos
-Discount,Descuento
-Shipping,Envío
-No tax,Sin impuestos
-Tax,Impuesto
+# Checkout Page
+"Checkout","Pago"
+# Contact Information
+"Contact Information","Información de contacto"
+"Contact information","Información de contacto"
+"Contact","Contacto"
+"Logged in as","Conectado como"
+"Successfully logged out","Sesión cerrada exitosamente"
+"Logout failed","Error al cerrar sesión"
+"Logging out...","Cerrando sesión..."
+"Logout","Cerrar sesión"
+"Email","Correo electrónico"
+"Email is required","El correo electrónico es obligatorio"
+"Enter your email","Ingresa tu correo electrónico"
+"Password","Contraseña"
+"Password is required","La contraseña es obligatoria"
+"Enter your password","Ingresa tu contraseña"
+"Logging in...","Iniciando sesión..."
+"Log in","Iniciar sesión"
+"Cancel","Cancelar"
+"Already have an account?","¿Ya tienes una cuenta?"
+"Successfully logged in","Sesión iniciada exitosamente"
+"Login failed","Error al iniciar sesión"
+# Shipping Address
+"Shipping Address","Dirección de envío"
+"Failed to update shipment","Error al actualizar el envío"
+# Shipping Methods
+"Shipping Method","Método de envío"
+"Available shipping methods will appear once you provide your address details","Los métodos de envío disponibles aparecerán una vez que proporciones los detalles de tu dirección"
+"No shipping methods available","No hay métodos de envío disponibles"
+"No shipping options are available for your location","No hay opciones de envío disponibles para tu ubicación"
+"FREE","GRATIS"
+"Contact for pricing","Contactar para precio"
+"Please select a shipping method","Por favor selecciona un método de envío"
 "Sorry, there is no available method for your address","Lo sentimos, no hay un método disponible para su dirección"
-Please enter a shipping address in order to see shipping quotes,Por favor ingrese una dirección de envío para ver presupuestos de envío
-Continue to payment,Continuar al pago
-No payment method available,No hay métodos de pago disponibles
-Ship to,Enviar a
-Shipment,Envío
-Thank you $name!,¡Gracias $name!
-Contact information,Información de contacto
-Order #$orderNumber,Pedido #$orderNumber
-ADD TO CART,AÑADIR AL CARRITO
+"Please enter a shipping address in order to see shipping quotes","Por favor ingrese una dirección de envío para ver presupuestos de envío"
+# Payment Information
+"Payment Information","Información de pago"
+"Payment Method","Método de pago"
+"Please select a valid payment method","Por favor selecciona un método de pago válido"
+# Billing Address
+"Billing Address","Dirección de facturación"
+"Same as shipping address","Igual que la dirección de envío"
+"My billing address is same as shipping address","Mi dirección de facturación es la misma que la de envío"
+"Use a different billing address","Usar una dirección de facturación diferente"
+"Continue to payment","Continuar al pago"
+# Payment Methods
+"Pick a payment method","Elige un método de pago"
+"No payment methods available","No hay métodos de pago disponibles"
+"No payment method available","No hay métodos de pago disponibles"
+"Please select a payment method","Por favor selecciona un método de pago"
+# Checkout Button
+"Please provide billing address to proceed","Por favor proporciona la dirección de facturación para continuar"
+"Complete Order","Completar pedido"
+"Select a payment method","Selecciona un método de pago"
+# Checkout Context
+"Cart ID is required to place order","Se requiere el ID del carrito para realizar el pedido"
+"Failed to place order","Error al realizar el pedido"
+"Cart ID is required to checkout","Se requiere el ID del carrito para el pago"
+"Failed to checkout","Error al procesar el pago"
+# Cash On Delivery
+"Conveniently pay with cash at your doorstep when your order is delivered.","Paga cómodamente en efectivo en tu puerta cuando se entregue tu pedido."
+"Failed to place order. Please try again.","Error al realizar el pedido. Por favor intenta de nuevo."
+"Placing Order...","Realizando pedido..."
+"Order Placed","Pedido realizado"
+"Place Order","Realizar pedido"
+# PayPal
+"You will be redirected to PayPal for payment processing.","Serás redirigido a PayPal para procesar el pago."
+"Redirecting to PayPal...","Redirigiendo a PayPal..."
+"Pay with PayPal","Pagar con PayPal"
+# Stripe
+"Stripe is not loaded. Please try again.","Stripe no se ha cargado. Por favor intenta de nuevo."
+"Can not process payment. Please try again later.","No se puede procesar el pago. Por favor intenta más tarde."
+"Some error occurred. Please try again later.","Ocurrió un error. Por favor intenta más tarde."
+"Processing Payment...","Procesando pago..."
+"Pay with Stripe","Pagar con Stripe"
+# Cart
+"Your cart is empty","Tu carrito está vacío"
+"Your cart is empty!","¡Tu carrito está vacío!"
+"Add some items to get started","Agrega algunos artículos para comenzar"
+"Shopping cart","Carrito de compras"
+"Shopping Cart","Carrito de compras"
+"Continue shopping","Seguir comprando"
+"Continue Shopping","Seguir comprando"
+"CONTINUE SHOPPING","SEGUIR COMPRANDO"
+"ADD TO CART","AÑADIR AL CARRITO"
 "Please select variant options","Por favor selecciona opciones de variante"
-VIEW CART ($count),VER CARRITO ($count)
-JUST ADDED TO YOUR CART,ACABA DE AÑADIR A SU CARRITO
-Promotion code?,¿Código de promoción?
-Enter coupon code,Ingrese código de cupón
-Apply,Aplicar
-Your cart is empty!,¡Su carrito está vacío!
-Full name,Nombre completo
-Telephone,Teléfono
-Address,Dirección
-City,Ciudad
-Country,País
-Postcode,Código postal
-Inclusive of tax,Impuestos incluidos
-"Sorry, there is no available method for your address","Lo sentimos, no hay un método disponible para su dirección"
-Full name is required,Se requiere el nombre completo
-Telephone is required,Se requiere el teléfono
-Address is required,Se requiere la dirección
-City is required,Se requiere la ciudad
-Country is required,Se requiere el país
-Postcode is required,Se requiere el código postal
-Contact,Contacto
+"VIEW CART ($count)","VER CARRITO ($count)"
+"JUST ADDED TO YOUR CART","ACABA DE AÑADIR A SU CARRITO"
+"Product","Producto"
+"Price","Precio"
+"Quantity","Cantidad"
+"Qty","Cant"
+# Cart Summary
+"Total","Total"
+"Inclusive of tax ${totalTaxAmount}","Impuestos incluidos ${totalTaxAmount}"
+"Inclusive of tax","Impuestos incluidos"
+"Tax","Impuesto"
+"No tax","Sin impuestos"
+"Sub total","Subtotal"
+"Discount(${coupon})","Descuento(${coupon})"
+"Discount($coupon)","Descuento($coupon)"
+"Discount","Descuento"
+"Shipping (${method})","Envío (${method})"
+"Shipping","Envío"
+"No shipping required","No se requiere envío"
+"Select shipping method","Seleccionar método de envío"
+"Order summary","Resumen del pedido"
+"Taxes and shipping calculated at checkout","Impuestos y envío calculados al finalizar la compra"
+"CHECKOUT","FINALIZAR COMPRA"
+# Address Form
+"Full name","Nombre completo"
+"Full name is required","El nombre completo es obligatorio"
+"Telephone","Teléfono"
+"Telephone is required","El teléfono es obligatorio"
+"Address","Dirección"
+"Address is required","La dirección es obligatoria"
+"Address 2","Dirección 2"
+"City","Ciudad"
+"City is required","La ciudad es obligatoria"
+"Country","País"
+"Country is required","El país es obligatorio"
+"Province","Provincia"
+"Province is required","La provincia es obligatoria"
+"Postcode","Código postal"
+"Postcode is required","El código postal es obligatorio"
+# Coupon
+"Cart is not initialized","El carrito no está inicializado"
+"A coupon is already applied","Ya se ha aplicado un cupón"
+"Please enter a coupon code","Por favor ingresa un código de cupón"
+"Failed to apply coupon","Error al aplicar el cupón"
+"No coupon to remove","No hay cupón para eliminar"
+"Failed to remove coupon","Error al eliminar el cupón"
+"Coupon applied successfully!","¡Cupón aplicado exitosamente!"
+"Invalid coupon","Cupón inválido"
+"Coupon removed successfully!","¡Cupón eliminado exitosamente!"
+"Coupon code is required","El código de cupón es obligatorio"
+"Enter coupon code","Ingresa el código de cupón"
+"Promotion code?","¿Código de promoción?"
+"Remove","Eliminar"
+"Apply","Aplicar"
+# Mini Cart
+"Your Cart","Tu carrito"
+"Subtotal","Subtotal"
+"View Cart (${totalQty})","Ver carrito (${totalQty})"
+# Navigation
+"Continue to shipping","Continuar al envío"
+"Change","Cambiar"
+"Ship to","Enviar a"
+"Shipment","Envío"
+"Order","Pedido"
+"Sku","SKU"
+"$count items","$count artículos"
+# Checkout Success
+"Thank you ${name}!","¡Gracias ${name}!"
+"Thank you $name!","¡Gracias $name!"
+"Order #${orderNumber}","Pedido #${orderNumber}"
+"Order #$orderNumber","Pedido #$orderNumber"
