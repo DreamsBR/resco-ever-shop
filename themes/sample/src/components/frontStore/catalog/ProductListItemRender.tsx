@@ -186,7 +186,7 @@ export const ProductListItemRender = ({
           customAddToCartRenderer(product)
         ) : (
           <>
-            {/* INFO Button - Border 1px #647257, padding 8px 24px */}
+            {/* INFO Button - Border 1px #95151c, padding 8px 24px */}
             <a href={product.url} className="btn">
               {_('INFO')}
             </a>

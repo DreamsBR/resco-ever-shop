@@ -94,32 +94,32 @@ export default function Header() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 flex items-center justify-between w-full h-16 sm:h-20 px-4 sm:px-8 lg:px-20 bg-[#f0ece9] z-50">
+      <div className="fixed top-0 left-0 right-0 flex items-center justify-between w-full h-16 sm:h-20 px-4 sm:px-8 lg:px-20 bg-[#f9f4e1] z-50">
         {/* Logo */}
         <a href="/" className="flex flex-col gap-0.5">
-          <span className="text-[#647257] font-['Playfair_Display'] text-lg sm:text-2xl font-bold tracking-[1px] sm:tracking-[2px]">
+          <span className="text-[#95151c] font-['Playfair_Display'] text-lg sm:text-2xl font-bold tracking-[1px] sm:tracking-[2px]">
             MARIA'S MEAT MARKET
           </span>
-          <span className="text-[#647257] font-['Manrope'] text-[8px] sm:text-[10px] tracking-[1px] sm:tracking-[1.5px]">
+          <span className="text-[#95151c] font-['Manrope'] text-[8px] sm:text-[10px] tracking-[1px] sm:tracking-[1.5px]">
             DISTRIBUIDORA DE CARNES
           </span>
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 xl:gap-12">
-          <a href="/" className="text-[#647257] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
+          <a href="/" className="text-[#95151c] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
             HOME
           </a>
-          <a href="/#categorias" className="text-[#647257] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
+          <a href="/#categorias" className="text-[#95151c] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
             COMPRAR
           </a>
-          <a href="#nuestra-carne" className="text-[#647257] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
+          <a href="#nuestra-carne" className="text-[#95151c] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
             NUESTRA CARNE
           </a>
-          <a href="#sostenibilidad" className="text-[#647257] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
+          <a href="#sostenibilidad" className="text-[#95151c] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
             SOSTENIBILIDAD
           </a>
-          <a href="#contacto" className="text-[#647257] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
+          <a href="#contacto" className="text-[#95151c] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
             CONTACTO
           </a>
         </nav>
@@ -128,7 +128,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           {/* Cart Icon */}
           <button
-            className="cart-toggle relative text-[#647257] hover:opacity-80 transition-opacity p-1"
+            className="cart-toggle relative text-[#95151c] hover:opacity-80 transition-opacity p-1"
             onClick={() => setIsCartOpen(prev => !prev)}
             aria-label={`Carrito (${cartQty} items)`}
           >
@@ -145,7 +145,7 @@ export default function Header() {
               </svg>
             )}
             {cartQty > 0 && (
-              <span className="absolute -top-1 -right-1 bg-[#647257] text-[#f0ece9] text-[9px] sm:text-[10px] font-bold w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-[#95151c] text-[#f9f4e1] text-[9px] sm:text-[10px] font-bold w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center">
                 {cartQty > 99 ? '99+' : cartQty}
               </span>
             )}
@@ -153,7 +153,7 @@ export default function Header() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="menu-toggle lg:hidden text-[#647257] p-1"
+            className="menu-toggle lg:hidden text-[#95151c] p-1"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -200,7 +200,7 @@ export default function Header() {
               height: '100%',
               width: '85%',
               maxWidth: '400px',
-              backgroundColor: '#f0ece9',
+              backgroundColor: '#f9f4e1',
               boxShadow: '-4px 0 20px rgba(0,0,0,0.15)',
               zIndex: 10002,
               display: 'flex',
@@ -217,7 +217,7 @@ export default function Header() {
               borderBottom: '1px solid rgba(100,114,87,0.12)'
             }}>
               <h2 style={{
-                color: '#647257',
+                color: '#95151c',
                 fontFamily: "'Playfair Display', serif",
                 fontSize: '20px',
                 fontWeight: 600,
@@ -228,7 +228,7 @@ export default function Header() {
               <button
                 onClick={closeCart}
                 style={{
-                  color: '#647257',
+                  color: '#95151c',
                   background: 'none',
                   border: 'none',
                   cursor: 'pointer',
@@ -253,12 +253,12 @@ export default function Header() {
                   justifyContent: 'center',
                   padding: '24px'
                 }}>
-                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#647257" strokeWidth="1.5" style={{ opacity: 0.3, marginBottom: '16px' }}>
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#95151c" strokeWidth="1.5" style={{ opacity: 0.3, marginBottom: '16px' }}>
                     <circle cx="8" cy="21" r="1" />
                     <circle cx="19" cy="21" r="1" />
                     <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
                   </svg>
-                  <p style={{ color: '#647257', fontFamily: "'Manrope', sans-serif", fontSize: '16px', marginBottom: '8px' }}>
+                  <p style={{ color: '#95151c', fontFamily: "'Manrope', sans-serif", fontSize: '16px', marginBottom: '8px' }}>
                     Tu carrito está vacío
                   </p>
                   <p style={{ color: '#9a9a8a', fontFamily: "'Manrope', sans-serif", fontSize: '14px', textAlign: 'center', marginBottom: '24px' }}>
@@ -268,8 +268,8 @@ export default function Header() {
                     href="/productos"
                     onClick={closeCart}
                     style={{
-                      backgroundColor: '#647257',
-                      color: '#f0ece9',
+                      backgroundColor: '#95151c',
+                      color: '#f9f4e1',
                       fontFamily: "'Manrope', sans-serif",
                       fontSize: '12px',
                       fontWeight: 600,
@@ -297,7 +297,7 @@ export default function Header() {
                         <div style={{
                           width: '80px',
                           height: '80px',
-                          backgroundColor: '#e8e4e0',
+                          backgroundColor: '#f9f4e1',
                           flexShrink: 0,
                           display: 'flex',
                           alignItems: 'center',
@@ -310,7 +310,7 @@ export default function Header() {
                               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             />
                           ) : (
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#647257" strokeWidth="1.5" style={{ opacity: 0.3 }}>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#95151c" strokeWidth="1.5" style={{ opacity: 0.3 }}>
                               <rect x="3" y="3" width="18" height="18" rx="2" />
                               <circle cx="8.5" cy="8.5" r="1.5" />
                               <path d="M21 15l-5-5L5 21" />
@@ -322,7 +322,7 @@ export default function Header() {
                         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                           <div>
                             <h3 style={{
-                              color: '#647257',
+                              color: '#95151c',
                               fontFamily: "'Playfair Display', serif",
                               fontSize: '14px',
                               fontWeight: 600,
@@ -342,7 +342,7 @@ export default function Header() {
                           </div>
                           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                             <span style={{
-                              color: '#7a8a6d',
+                              color: '#000000',
                               fontFamily: "'Manrope', sans-serif",
                               fontSize: '14px',
                               fontWeight: 500
@@ -353,7 +353,7 @@ export default function Header() {
                               onClick={() => handleRemoveItem(item.cartItemId)}
                               disabled={removingItemId === item.cartItemId}
                               style={{
-                                color: removingItemId === item.cartItemId ? '#647257' : '#9a9a8a',
+                                color: removingItemId === item.cartItemId ? '#95151c' : '#9a9a8a',
                                 background: 'none',
                                 border: 'none',
                                 cursor: removingItemId === item.cartItemId ? 'wait' : 'pointer',
@@ -384,13 +384,13 @@ export default function Header() {
                   <div style={{
                     padding: '20px 24px',
                     borderTop: '1px solid rgba(100,114,87,0.12)',
-                    backgroundColor: '#f0ece9'
+                    backgroundColor: '#f9f4e1'
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-                      <span style={{ color: '#647257', fontFamily: "'Manrope', sans-serif", fontSize: '14px', fontWeight: 500 }}>
+                      <span style={{ color: '#95151c', fontFamily: "'Manrope', sans-serif", fontSize: '14px', fontWeight: 500 }}>
                         Subtotal:
                       </span>
-                      <span style={{ color: '#647257', fontFamily: "'Playfair Display', serif", fontSize: '18px', fontWeight: 600 }}>
+                      <span style={{ color: '#95151c', fontFamily: "'Playfair Display', serif", fontSize: '18px', fontWeight: 600 }}>
                         {cartTotal}
                       </span>
                     </div>
@@ -401,8 +401,8 @@ export default function Header() {
                           display: 'block',
                           width: '100%',
                           textAlign: 'center',
-                          border: '1px solid #647257',
-                          color: '#647257',
+                          border: '1px solid #95151c',
+                          color: '#95151c',
                           fontFamily: "'Manrope', sans-serif",
                           fontSize: '12px',
                           fontWeight: 600,
@@ -420,8 +420,8 @@ export default function Header() {
                           display: 'block',
                           width: '100%',
                           textAlign: 'center',
-                          backgroundColor: '#647257',
-                          color: '#f0ece9',
+                          backgroundColor: '#95151c',
+                          color: '#f9f4e1',
                           fontFamily: "'Manrope', sans-serif",
                           fontSize: '12px',
                           fontWeight: 600,
@@ -445,21 +445,21 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="mobile-menu fixed inset-0 top-16 bg-[#f0ece9] z-50 lg:hidden">
+        <div className="mobile-menu fixed inset-0 top-16 bg-[#f9f4e1] z-50 lg:hidden">
           <nav className="flex flex-col items-center gap-8 pt-12">
-            <a href="/" className="text-[#647257] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
+            <a href="/" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               HOME
             </a>
-            <a href="/#categorias" className="text-[#647257] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#categorias" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               COMPRAR
             </a>
-            <a href="#nuestra-carne" className="text-[#647257] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
+            <a href="#nuestra-carne" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               NUESTRA CARNE
             </a>
-            <a href="#sostenibilidad" className="text-[#647257] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
+            <a href="#sostenibilidad" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               SOSTENIBILIDAD
             </a>
-            <a href="#contacto" className="text-[#647257] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
+            <a href="#contacto" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               CONTACTO
             </a>
           </nav>

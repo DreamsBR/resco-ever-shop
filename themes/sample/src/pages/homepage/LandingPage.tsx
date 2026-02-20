@@ -237,12 +237,12 @@ function CategoryCard({ name, image, url, index }: CategoryCardProps) {
         style={{ backgroundImage: `url('${image}')` }}
       />
       <div className="flex flex-col gap-2 items-center w-full">
-        <h3 className="text-[#647257] font-['Playfair_Display'] text-lg font-semibold tracking-[1px] uppercase">
+        <h3 className="text-[#95151c] font-['Playfair_Display'] text-lg font-semibold tracking-[1px] uppercase">
           {name}
         </h3>
         <a
           href={url}
-          className="border border-[#647257] text-[#647257] font-['Manrope'] text-[11px] font-medium tracking-[1px] px-6 py-2 hover:bg-[#647257] hover:text-[#f0ece9] transition-colors"
+          className="border border-[#95151c] text-[#95151c] font-['Manrope'] text-[11px] font-medium tracking-[1px] px-6 py-2 hover:bg-[#95151c] hover:text-[#f9f4e1] transition-colors"
         >
           VER CATEGORÍA
         </a>
@@ -277,16 +277,16 @@ function CategoriesSection({ categories }: CategoriesSectionProps) {
   const ref = useIntersectionObserver();
 
   return (
-    <section className="bg-[#f0ece9] px-4 sm:px-8 lg:px-20 py-12 lg:py-20">
+    <section className="bg-[#f9f4e1] px-4 sm:px-8 lg:px-20 py-12 lg:py-20">
       <div ref={ref} className="max-w-7xl mx-auto flex flex-col items-center gap-8 lg:gap-12 animate-section">
         {/* Section Title */}
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 animate-fade-up">
-          <h2 className="text-[#647257] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-[42px]">NUESTRAS</h2>
-          <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#647257]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <h2 className="text-[#95151c] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-[42px]">NUESTRAS</h2>
+          <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#95151c]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
             <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
           </svg>
-          <h2 className="text-[#647257] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-[42px]">CATEGORÍAS</h2>
+          <h2 className="text-[#95151c] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-[42px]">CATEGORÍAS</h2>
         </div>
 
         {/* Categories Grid */}
@@ -302,7 +302,7 @@ function CategoriesSection({ categories }: CategoriesSectionProps) {
               />
             ))
           ) : (
-            <p className="text-[#7a8a6d] font-['Manrope']">No hay categorías disponibles</p>
+            <p className="text-[#000000] font-['Manrope']">No hay categorías disponibles</p>
           )}
         </div>
       </div>
@@ -325,25 +325,25 @@ function NuestraCarneSection() {
       />
 
       {/* Content */}
-      <div className="flex-1 flex flex-col justify-center gap-6 lg:gap-8 bg-[#647257] px-6 sm:px-12 lg:px-20 py-12 lg:py-20">
-        <span className="text-[#f0ece9] font-['Manrope'] text-xs font-semibold tracking-[3px] opacity-70 animate-fade-up delay-1">
+      <div className="flex-1 flex flex-col justify-center gap-6 lg:gap-8 bg-[#95151c] px-6 sm:px-12 lg:px-20 py-12 lg:py-20">
+        <span className="text-[#f9f4e1] font-['Manrope'] text-xs font-semibold tracking-[3px] opacity-70 animate-fade-up delay-1">
           NUESTRA CARNE
         </span>
-        <h2 className="text-[#f0ece9] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-5xl leading-[1.15] animate-fade-up delay-2">
+        <h2 className="text-[#f9f4e1] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-5xl leading-[1.15] animate-fade-up delay-2">
           Tradición y
           <br />
           Calidad en
           <br />
           Cada Corte
         </h2>
-        <p className="text-[#f0ece9] font-['Manrope'] text-sm lg:text-[15px] leading-[1.7] opacity-90 max-w-[420px] animate-fade-up delay-3">
+        <p className="text-[#f9f4e1] font-['Manrope'] text-sm lg:text-[15px] leading-[1.7] opacity-90 max-w-[420px] animate-fade-up delay-3">
           Trabajamos directamente con los mejores ganaderos de la región, garantizando carnes de primera
           calidad con trazabilidad completa. Nuestro proceso de maduración en seco realza el sabor y la
           terneza de cada pieza.
         </p>
         <a
           href="/about"
-          className="border border-[#f0ece9] text-[#f0ece9] font-['Manrope'] text-xs font-medium tracking-[1px] px-7 py-3.5 w-fit hover:bg-[#f0ece9] hover:text-[#647257] transition-colors animate-fade-up delay-4"
+          className="border border-[#f9f4e1] text-[#f9f4e1] font-['Manrope'] text-xs font-medium tracking-[1px] px-7 py-3.5 w-fit hover:bg-[#f9f4e1] hover:text-[#95151c] transition-colors animate-fade-up delay-4"
         >
           CONOCER MÁS
         </a>
@@ -363,17 +363,17 @@ interface SustainabilityCardProps {
 function SustainabilityCard({ icon, title, description, index }: SustainabilityCardProps) {
   return (
     <div
-      className={`flex flex-col items-center gap-4 lg:gap-5 w-full sm:w-[280px] p-6 lg:p-8 border border-[#64725730] animate-fade-up`}
+      className={`flex flex-col items-center gap-4 lg:gap-5 w-full sm:w-[280px] p-6 lg:p-8 border border-[#95151c30] animate-fade-up`}
       style={{ animationDelay: `${0.1 + index * 0.15}s` }}
     >
-      <div className="text-[#647257] w-8 h-8 lg:w-10 lg:h-10">
+      <div className="text-[#95151c] w-8 h-8 lg:w-10 lg:h-10">
         {icon}
       </div>
       <h3
-        className="text-[#647257] font-['Playfair_Display'] text-xl lg:text-[22px] leading-[1.2] text-center"
+        className="text-[#95151c] font-['Playfair_Display'] text-xl lg:text-[22px] leading-[1.2] text-center"
         dangerouslySetInnerHTML={{ __html: title }}
       />
-      <p className="text-[#7a8a6d] font-['Manrope'] text-xs lg:text-sm leading-[1.5] text-center max-w-[220px]">
+      <p className="text-[#000000] font-['Manrope'] text-xs lg:text-sm leading-[1.5] text-center max-w-[220px]">
         {description}
       </p>
     </div>
@@ -385,17 +385,17 @@ function SostenibilidadSection() {
   const ref = useIntersectionObserver();
 
   return (
-    <section className="bg-[#f0ece9] px-4 sm:px-8 lg:px-20 py-12 lg:py-[100px]">
+    <section className="bg-[#f9f4e1] px-4 sm:px-8 lg:px-20 py-12 lg:py-[100px]">
       <div ref={ref} className="max-w-7xl mx-auto flex flex-col items-center gap-10 lg:gap-[60px] animate-section">
         {/* Header */}
         <div className="flex flex-col items-center gap-4 lg:gap-5">
-          <span className="text-[#647257] font-['Manrope'] text-xs font-semibold tracking-[3px] animate-fade-up delay-1">
+          <span className="text-[#95151c] font-['Manrope'] text-xs font-semibold tracking-[3px] animate-fade-up delay-1">
             COMPROMISO AMBIENTAL
           </span>
-          <h2 className="text-[#647257] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-5xl animate-fade-up delay-2">
+          <h2 className="text-[#95151c] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-5xl animate-fade-up delay-2">
             Sostenibilidad
           </h2>
-          <p className="text-[#7a8a6d] font-['Manrope'] text-sm lg:text-base leading-[1.6] text-center max-w-[600px] px-4 animate-fade-up delay-3">
+          <p className="text-[#000000] font-['Manrope'] text-sm lg:text-base leading-[1.6] text-center max-w-[600px] px-4 animate-fade-up delay-3">
             Creemos en una producción responsable que respeta el medio ambiente y el bienestar animal.
           </p>
         </div>
@@ -452,16 +452,16 @@ function ContactSection() {
   return (
     <section ref={ref} className="flex flex-col lg:flex-row min-h-[400px] lg:h-[500px] animate-section">
       {/* Content */}
-      <div className="flex-1 flex flex-col justify-center gap-6 lg:gap-8 bg-[#e8e4e0] px-6 sm:px-12 lg:px-20 py-12 lg:py-20 order-2 lg:order-1">
-        <span className="text-[#647257] font-['Manrope'] text-xs font-semibold tracking-[3px] animate-fade-up delay-1">
+      <div className="flex-1 flex flex-col justify-center gap-6 lg:gap-8 bg-[#f9f4e1] px-6 sm:px-12 lg:px-20 py-12 lg:py-20 order-2 lg:order-1">
+        <span className="text-[#95151c] font-['Manrope'] text-xs font-semibold tracking-[3px] animate-fade-up delay-1">
           CONTACTO
         </span>
-        <h2 className="text-[#647257] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-[44px] leading-[1.15] animate-fade-up delay-2">
+        <h2 className="text-[#95151c] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-[44px] leading-[1.15] animate-fade-up delay-2">
           ¿Listo para
           <br />
           Probar lo Mejor?
         </h2>
-        <p className="text-[#7a8a6d] font-['Manrope'] text-sm lg:text-[15px] leading-[1.6] max-w-[400px] animate-fade-up delay-3">
+        <p className="text-[#000000] font-['Manrope'] text-sm lg:text-[15px] leading-[1.6] max-w-[400px] animate-fade-up delay-3">
           Contáctanos para pedidos mayoristas, consultas sobre nuestros productos o para conocer más
           sobre nuestro proceso.
         </p>
@@ -469,30 +469,30 @@ function ContactSection() {
         {/* Contact Info */}
         <div className="flex flex-col gap-3 lg:gap-4 animate-fade-up delay-4">
           <div className="flex items-center gap-3">
-            <svg className="w-[18px] h-[18px] text-[#647257]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="w-[18px] h-[18px] text-[#95151c]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
-            <span className="text-[#647257] font-['Manrope'] text-sm">+51 961 109 825</span>
+            <span className="text-[#95151c] font-['Manrope'] text-sm">+51 961 109 825</span>
           </div>
           <div className="flex items-center gap-3">
-            <svg className="w-[18px] h-[18px] text-[#647257]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="w-[18px] h-[18px] text-[#95151c]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <rect width="20" height="16" x="2" y="4" rx="2" />
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
             </svg>
-            <span className="text-[#647257] font-['Manrope'] text-sm">pedidos@mariasmeat.com</span>
+            <span className="text-[#95151c] font-['Manrope'] text-sm">pedidos@mariasmeat.com</span>
           </div>
           <div className="flex items-center gap-3">
-            <svg className="w-[18px] h-[18px] text-[#647257]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="w-[18px] h-[18px] text-[#95151c]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
               <circle cx="12" cy="10" r="3" />
             </svg>
-            <span className="text-[#647257] font-['Manrope'] text-sm">Lima, Perú</span>
+            <span className="text-[#95151c] font-['Manrope'] text-sm">Lima, Perú</span>
           </div>
         </div>
 
         <a
           href="/contact"
-          className="bg-[#647257] text-[#f0ece9] font-['Manrope'] text-xs font-semibold tracking-[1px] px-7 py-3.5 w-fit hover:bg-[#556348] transition-colors animate-fade-up delay-5"
+          className="bg-[#95151c] text-[#f9f4e1] font-['Manrope'] text-xs font-semibold tracking-[1px] px-7 py-3.5 w-fit hover:bg-[#556348] transition-colors animate-fade-up delay-5"
         >
           ENVIAR MENSAJE
         </a>

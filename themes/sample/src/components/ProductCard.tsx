@@ -62,7 +62,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </>
           ) : (
             <div className="product-card__no-image">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#647257" strokeWidth="1.5" opacity="0.3">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#95151c" strokeWidth="1.5" opacity="0.3">
                 <rect x="3" y="3" width="18" height="18" rx="2" />
                 <circle cx="8.5" cy="8.5" r="1.5" />
                 <path d="M21 15l-5-5L5 21" />
@@ -208,12 +208,12 @@ export function ProductCard({ product }: ProductCardProps) {
           gap: 8px;
         }
 
-        /* Product Name - Playfair Display, 18px, weight 600, #647257 */
+        /* Product Name - Playfair Display, 18px, weight 600, #95151c */
         .product-card__name {
           font-family: 'Playfair Display', serif;
           font-size: 18px;
           font-weight: 600;
-          color: #647257;
+          color: #95151c;
           letter-spacing: 1px;
           text-transform: uppercase;
           text-align: center;
@@ -231,7 +231,7 @@ export function ProductCard({ product }: ProductCardProps) {
           opacity: 0.8;
         }
 
-        /* Price - Manrope, 14px, #7a8a6d */
+        /* Price - Manrope, 14px, #000000 */
         .product-card__price {
           display: flex;
           align-items: center;
@@ -243,7 +243,7 @@ export function ProductCard({ product }: ProductCardProps) {
           font-family: 'Manrope', sans-serif;
           font-size: 14px;
           font-weight: normal;
-          color: #7a8a6d;
+          color: #000000;
         }
 
         .product-card__price-old {
@@ -270,15 +270,15 @@ export function ProductCard({ product }: ProductCardProps) {
           padding-top: 8px;
         }
 
-        /* INFO Button - Border 1px #647257, padding 8px 24px */
+        /* INFO Button - Border 1px #95151c, padding 8px 24px */
         .product-card__info-btn {
           font-family: 'Manrope', sans-serif;
           font-size: 11px;
           font-weight: 500;
           letter-spacing: 1px;
-          color: #647257;
+          color: #95151c;
           background: transparent;
-          border: 1px solid #647257;
+          border: 1px solid #95151c;
           padding: 8px 24px;
           text-decoration: none;
           cursor: pointer;
@@ -287,28 +287,28 @@ export function ProductCard({ product }: ProductCardProps) {
         }
 
         .product-card__info-btn:hover {
-          background: #647257;
+          background: #95151c;
           color: #ffffff;
           transform: scale(1.05);
         }
 
-        /* Cart Button - Icon 18x18, #647257 */
+        /* Cart Button - Icon 18x18, #95151c */
         .product-card__cart-btn {
           display: flex;
           align-items: center;
           justify-content: center;
           width: 36px;
           height: 36px;
-          color: #647257;
+          color: #95151c;
           background: transparent;
-          border: 1px solid #647257;
+          border: 1px solid #95151c;
           border-radius: 50%;
           cursor: pointer;
           transition: all 0.25s ease;
         }
 
         .product-card__cart-btn:hover {
-          background: #647257;
+          background: #95151c;
           color: #ffffff;
           transform: scale(1.1);
         }

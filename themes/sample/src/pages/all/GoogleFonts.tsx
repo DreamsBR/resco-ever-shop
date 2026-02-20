@@ -14,7 +14,7 @@ export default function GoogleFonts() {
           __html: `
             /* Base styles for the site */
             html, body {
-              background-color: #f0ece9;
+              background-color: #f9f4e1;
               overflow-x: hidden;
               max-width: 100vw;
             }
@@ -42,7 +42,7 @@ export default function GoogleFonts() {
             /* Style the header container */
             .header {
               padding: 0 !important;
-              background: #f0ece9 !important;
+              background: #f9f4e1 !important;
             }
 
             .header__top {
