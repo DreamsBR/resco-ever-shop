@@ -142,6 +142,8 @@ function ProductCard({ product }: { product: Product }) {
 
 export default function ProductosPage({ allProducts, categories }: ProductosPageProps) {
   const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 12;
 
   const products = allProducts?.items || [];
   const categoryList = categories?.items || [];
@@ -169,8 +171,21 @@ export default function ProductosPage({ allProducts, categories }: ProductosPage
     return products.filter((p) => productIds.has(p.productId));
   }, [products, selectedCategoryId, categoryProductMap]);
 
+  // Pagination
+  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
+  const paginatedProducts = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredProducts, currentPage]);
+
   const handleCategoryClick = (categoryId: number | null) => {
     setSelectedCategoryId(categoryId);
+    setCurrentPage(1);
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -235,6 +250,9 @@ export default function ProductosPage({ allProducts, categories }: ProductosPage
               {selectedCategoryId !== null && (
                 <> en <strong>{categoryList.find(c => c.categoryId === selectedCategoryId)?.name}</strong></>
               )}
+              {totalPages > 1 && (
+                <> &mdash; Página {currentPage} de {totalPages}</>
+              )}
             </span>
             {selectedCategoryId !== null && (
               <button
@@ -250,9 +268,9 @@ export default function ProductosPage({ allProducts, categories }: ProductosPage
           </div>
 
           {/* Product Grid */}
-          {filteredProducts.length > 0 ? (
-            <div className="productos-page__grid" key={selectedCategoryId ?? 'all'}>
-              {filteredProducts.map((product, index) => (
+          {paginatedProducts.length > 0 ? (
+            <div className="productos-page__grid" key={`${selectedCategoryId ?? 'all'}-${currentPage}`}>
+              {paginatedProducts.map((product, index) => (
                 <div
                   key={product.productId}
                   className="productos-page__grid-item"
@@ -276,6 +294,43 @@ export default function ProductosPage({ allProducts, categories }: ProductosPage
                 Ver todos los productos
               </button>
             </div>
+          )}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <nav className="productos-page__pagination">
+              <button
+                className="productos-page__page-btn"
+                disabled={currentPage === 1}
+                onClick={() => handlePageChange(currentPage - 1)}
+                aria-label="Página anterior"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  className={`productos-page__page-btn ${currentPage === page ? 'active' : ''}`}
+                  onClick={() => handlePageChange(page)}
+                >
+                  {page}
+                </button>
+              ))}
+
+              <button
+                className="productos-page__page-btn"
+                disabled={currentPage === totalPages}
+                onClick={() => handlePageChange(currentPage + 1)}
+                aria-label="Página siguiente"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </nav>
           )}
         </div>
       </div>
@@ -545,6 +600,52 @@ export default function ProductosPage({ allProducts, categories }: ProductosPage
           background: #7a1017;
         }
 
+        /* Pagination */
+        .productos-page__pagination {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          margin-top: 3rem;
+          padding-top: 2rem;
+          border-top: 1px solid #e8e6e3;
+        }
+
+        .productos-page__page-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 40px;
+          height: 40px;
+          font-family: 'Manrope', sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+          color: #95151c;
+          background: transparent;
+          border: 1px solid #e8e6e3;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          padding: 0 4px;
+        }
+
+        .productos-page__page-btn:hover:not(:disabled) {
+          border-color: #95151c;
+          background: #f8f6f3;
+        }
+
+        .productos-page__page-btn.active {
+          background: #95151c;
+          border-color: #95151c;
+          color: #ffffff;
+          font-weight: 600;
+        }
+
+        .productos-page__page-btn:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+
         /* ============================================
            PRODUCT CARD STYLES (inline)
            ============================================ */
@@ -804,7 +905,7 @@ export const layout = {
 
 export const query = `
   query Query {
-    allProducts: products(filters: []) {
+    allProducts: products(filters: [{key: "limit", operation: eq, value: "200"}]) {
       items {
         ...Product
       }
