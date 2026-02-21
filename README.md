@@ -1,4 +1,4 @@
-# Maria's Meat Market - Evershop E-commerce
+# Resco - Evershop E-commerce
 
 Plataforma de e-commerce construida con [Evershop](https://evershop.io/), una solución de comercio electrónico open-source basada en Node.js, React y GraphQL.
 
