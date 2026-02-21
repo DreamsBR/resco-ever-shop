@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="flex flex-col gap-4 pl-1 pr-1 w-[300px]">
           <span className="text-[#f9f4e1] font-['Playfair_Display'] text-xl font-bold tracking-[1px]">
-            MARIA'S MEAT MARKET
+            RESCO
           </span>
           <p className="text-[#f9f4e1] font-['Manrope'] text-[13px] leading-[1.5] opacity-70">
             Distribuidora de carnes premium para los paladares más exigentes desde 1985.
@@ -29,7 +29,7 @@ export default function Footer() {
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
               </svg>
             </a>
-            <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" className="text-[#f9f4e1] hover:opacity-80 transition-opacity">
+            <a href="https://wa.me/51970520507" target="_blank" rel="noopener noreferrer" className="text-[#f9f4e1] hover:opacity-80 transition-opacity">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
               </svg>
@@ -82,7 +82,7 @@ export default function Footer() {
       {/* Bottom Footer */}
       <div className="flex items-center justify-between w-full pt-5 border-t border-[#f9f4e130]">
         <span className="text-[#f9f4e1] font-['Manrope'] text-xs opacity-50">
-          © {currentYear} Maria's Meat Market. Todos los derechos reservados.
+          © {currentYear} Resco. Todos los derechos reservados.
         </span>
         <div className="flex gap-6">
           <a href="/terms" className="text-[#f9f4e1] font-['Manrope'] text-xs opacity-50 hover:opacity-100 transition-opacity">

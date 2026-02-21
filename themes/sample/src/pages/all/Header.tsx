@@ -98,7 +98,7 @@ export default function Header() {
         {/* Logo */}
         <a href="/" className="flex flex-col gap-0.5">
           <span className="text-[#95151c] font-['Playfair_Display'] text-lg sm:text-2xl font-bold tracking-[1px] sm:tracking-[2px]">
-            MARIA'S MEAT MARKET
+            RESCO
           </span>
           <span className="text-[#95151c] font-['Manrope'] text-[8px] sm:text-[10px] tracking-[1px] sm:tracking-[1.5px]">
             DISTRIBUIDORA DE CARNES
@@ -107,19 +107,19 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 xl:gap-12">
-          <a href="/" className="text-[#95151c] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
+          <a href="/" className="text-[#95151c] font-['Manrope'] text-sm font-medium tracking-[1px] hover:font-bold hover:underline transition-all">
             HOME
           </a>
-          <a href="/#categorias" className="text-[#95151c] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
+          <a href="/productos" className="text-[#95151c] font-['Manrope'] text-sm font-medium tracking-[1px] hover:font-bold hover:underline transition-all">
             COMPRAR
           </a>
-          <a href="#nuestra-carne" className="text-[#95151c] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
+          <a href="/#nuestra-carne" className="text-[#95151c] font-['Manrope'] text-sm font-medium tracking-[1px] hover:font-bold hover:underline transition-all">
             NUESTRA CARNE
           </a>
-          <a href="#sostenibilidad" className="text-[#95151c] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
+          <a href="/#sostenibilidad" className="text-[#95151c] font-['Manrope'] text-sm font-medium tracking-[1px] hover:font-bold hover:underline transition-all">
             SOSTENIBILIDAD
           </a>
-          <a href="#contacto" className="text-[#95151c] font-['Manrope'] text-xs font-medium tracking-[1px] hover:font-semibold transition-all">
+          <a href="/contact" className="text-[#95151c] font-['Manrope'] text-sm font-medium tracking-[1px] hover:font-bold hover:underline transition-all">
             CONTACTO
           </a>
         </nav>
@@ -450,16 +450,16 @@ export default function Header() {
             <a href="/" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               HOME
             </a>
-            <a href="/#categorias" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
+            <a href="/productos" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               COMPRAR
             </a>
-            <a href="#nuestra-carne" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#nuestra-carne" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               NUESTRA CARNE
             </a>
-            <a href="#sostenibilidad" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#sostenibilidad" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               SOSTENIBILIDAD
             </a>
-            <a href="#contacto" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
+            <a href="/contact" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               CONTACTO
             </a>
           </nav>
