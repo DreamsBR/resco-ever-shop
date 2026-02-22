@@ -30,8 +30,32 @@ export default function PageLoader() {
       setShowLoader(true);
     };
 
+    // Handle browser back/forward buttons
+    const handlePopState = () => {
+      setShowLoader(true);
+    };
+
+    // Hide loader when page is loaded
+    const handlePageShow = () => {
+      setShowLoader(false);
+    };
+
+    // Hide loader on load (fallback)
+    const handleLoad = () => {
+      setShowLoader(false);
+    };
+
     document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
+    window.addEventListener('popstate', handlePopState);
+    window.addEventListener('pageshow', handlePageShow);
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      document.removeEventListener('click', handleClick);
+      window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('pageshow', handlePageShow);
+      window.removeEventListener('load', handleLoad);
+    };
   }, []);
 
   if (!showLoader) return null;
