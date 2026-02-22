@@ -28,5 +28,8 @@ RUN npm run build
 # 7. Move build assets to public/assets.
 RUN mkdir -p public/assets && cp -r .evershop/build/* public/assets
 
+# 8. Copy static images to public/assets.
+COPY images ./public/assets/images
+
 EXPOSE 3000
 CMD ["npm", "run", "start"]

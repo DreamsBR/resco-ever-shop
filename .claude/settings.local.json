@@ -17,7 +17,8 @@
       "Bash(docker compose build:*)",
       "Bash(curl:*)",
       "Bash(powershell:*)",
-      "Bash(del:*)"
+      "Bash(del:*)",
+      "Bash(git*)"
     ]
   }
 }

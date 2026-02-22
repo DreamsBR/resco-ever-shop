@@ -41,7 +41,7 @@ export default function PageLoader() {
       <div className="page-loader">
         <div className="page-loader__content">
           <div className="page-loader__logo-wrapper">
-            <img src="/assets/resco-logo.png" alt="Resco" className="page-loader__logo" />
+            <img src="/assets/images/resco-logo.png" alt="Resco" className="page-loader__logo" />
           </div>
           <span className="page-loader__text">Cargando...</span>
         </div>

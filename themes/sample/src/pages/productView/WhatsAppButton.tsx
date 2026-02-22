@@ -31,6 +31,17 @@ export default function WhatsAppButton() {
         <span className="whatsapp-btn__text">Pedir información por WhatsApp</span>
       </a>
       <style dangerouslySetInnerHTML={{ __html: `
+        .product-image {
+          overflow: hidden;
+        }
+
+        .product-image img {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+          object-position: center !important;
+        }
+
         .whatsapp-btn {
           display: flex;
           align-items: center;
