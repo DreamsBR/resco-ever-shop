@@ -100,7 +100,7 @@ export default function Header() {
           <img 
             src="/assets/resco-logo.png" 
             alt="Resco" 
-            className="h-12 sm:h-16 w-auto object-contain"
+            className="w-20 h-20 sm:w-[120px] sm:h-[120px] object-contain"
           />
           <div className="flex flex-col gap-0.5">
             <span className="text-[#95151c] font-['Playfair_Display'] text-lg sm:text-2xl font-bold tracking-[1px] sm:tracking-[2px]">
