@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
   const productName = product?.name || 'Producto';
   const productSku = product?.sku || '';
 
-  const phoneNumber = '51961109825';
+  const phoneNumber = '51970520507';
   const message = `Hola, me interesa obtener más información sobre el producto: *${productName}* (SKU: ${productSku}). ¿Podrían ayudarme?`;
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
