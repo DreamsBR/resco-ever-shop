@@ -14,6 +14,7 @@ export default function PageLoader() {
       // Ignore external links, new tabs, anchors, javascript:, mailto:, tel:
       if (link.target === '_blank') return;
       if (href.startsWith('#')) return;
+      if (href.startsWith('/#')) return;
       if (href.startsWith('javascript:')) return;
       if (href.startsWith('mailto:') || href.startsWith('tel:')) return;
 
@@ -49,12 +50,14 @@ export default function PageLoader() {
     window.addEventListener('popstate', handlePopState);
     window.addEventListener('pageshow', handlePageShow);
     window.addEventListener('load', handleLoad);
+    window.addEventListener('hashchange', handlePageShow);
 
     return () => {
       document.removeEventListener('click', handleClick);
       window.removeEventListener('popstate', handlePopState);
       window.removeEventListener('pageshow', handlePageShow);
       window.removeEventListener('load', handleLoad);
+      window.removeEventListener('hashchange', handlePageShow);
     };
   }, []);
 
