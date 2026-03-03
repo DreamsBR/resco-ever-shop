@@ -12,6 +12,18 @@ export default function GoogleFonts() {
       <style
         dangerouslySetInnerHTML={{
           __html: `
+            @font-face {
+              font-family: 'BOXENBOLDSERIF';
+              src: url('/assets/fonts/boxen-bold-serif.eot');
+              src: url('/assets/fonts/boxen-bold-serif.eot?#iefix') format('embedded-opentype'),
+                   url('/assets/fonts/boxen-bold-serif.woff2') format('woff2'),
+                   url('/assets/fonts/boxen-bold-serif.woff') format('woff'),
+                   url('/assets/fonts/boxen-bold-serif.ttf') format('truetype'),
+                   url('/assets/fonts/boxen-bold-serif.svg#youworkforthem') format('svg');
+              font-weight: normal;
+              font-style: normal;
+            }
+
             /* Base styles for the site */
             html, body {
               background-color: #f9f4e1;

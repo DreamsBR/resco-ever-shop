@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="flex justify-between w-full">
         {/* Brand */}
         <div className="flex flex-col gap-4 pl-1 pr-1 w-[300px]">
-          <span className="text-[#f9f4e1] font-['Playfair_Display'] text-xl font-bold tracking-[1px]">
+          <span className="text-[#f9f4e1] text-xl font-bold tracking-[1px]" style={{ fontFamily: 'BOXENBOLDSERIF' }}>
             RESCO
           </span>
           <p className="text-[#f9f4e1] font-['Manrope'] text-[13px] leading-[1.5] opacity-70">
