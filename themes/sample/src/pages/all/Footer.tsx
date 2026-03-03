@@ -17,14 +17,14 @@ export default function Footer() {
           </p>
           {/* Social Icons */}
           <div className="flex gap-4">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-[#f9f4e1] hover:opacity-80 transition-opacity">
+            <a href="https://www.instagram.com/resco.pe/" target="_blank" rel="noopener noreferrer" className="text-[#f9f4e1] hover:opacity-80 transition-opacity">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
               </svg>
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-[#f9f4e1] hover:opacity-80 transition-opacity">
+            <a href="https://www.facebook.com/profile.php?id=61555771736567" target="_blank" rel="noopener noreferrer" className="text-[#f9f4e1] hover:opacity-80 transition-opacity">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
               </svg>
@@ -32,6 +32,12 @@ export default function Footer() {
             <a href="https://wa.me/51970520507" target="_blank" rel="noopener noreferrer" className="text-[#f9f4e1] hover:opacity-80 transition-opacity">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@resco.pe" target="_blank" rel="noopener noreferrer" className="text-[#f9f4e1] hover:opacity-80 transition-opacity">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 4v8.5a4.5 4.5 0 1 1-4.5-4.5" />
+                <path d="M14 4c1.1 2 2.8 3 5 3.2" />
               </svg>
             </a>
           </div>
@@ -47,7 +53,7 @@ export default function Footer() {
             <a href="/" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
               Home
             </a>
-            <a href="/categories" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
+            <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
               Comprar
             </a>
             <a href="#nuestra-carne" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
@@ -63,16 +69,16 @@ export default function Footer() {
             <span className="text-[#f9f4e1] font-['Manrope'] text-[11px] font-semibold tracking-[2px]">
               PRODUCTOS
             </span>
-            <a href="/categories" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
+            <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
               Cortes Premium
             </a>
-            <a href="/categories" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
+            <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
               Hamburguesas
             </a>
-            <a href="/categories" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
+            <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
               Embutidos
             </a>
-            <a href="/categories" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
+            <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
               Ofertas
             </a>
           </div>
