@@ -31,5 +31,8 @@ RUN mkdir -p public/assets && cp -r .evershop/build/* public/assets
 # 8. Copy static images to public/assets.
 COPY images ./public/assets/images
 
+# 9. Copy font files to public/assets/fonts.
+RUN mkdir -p public/assets/fonts && cp themes/sample/src/pages/all/*.woff* public/assets/fonts/
+
 EXPOSE 3000
 CMD ["npm", "run", "start"]

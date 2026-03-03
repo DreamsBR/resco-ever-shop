@@ -95,8 +95,8 @@ export default function Header() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 sm:gap-3">
           <img 
-            src="/assets/resco-logo.png" 
-            alt="Resco" 
+            src="/assets/images/resco-logo.png"
+            alt="Resco"
             className="w-20 h-20 sm:w-[120px] sm:h-[120px] object-contain"
           />
           <div className="flex flex-col gap-0.5">
