@@ -103,7 +103,7 @@ export default function Header() {
             className="w-20 h-20 sm:w-[120px] sm:h-[120px] object-contain"
           />
           <div className="flex flex-col gap-0.5">
-            <span className="text-[#95151c] font-['Playfair_Display'] text-lg sm:text-2xl font-bold tracking-[1px] sm:tracking-[2px]">
+            <span className="text-[#95151c] text-lg sm:text-2xl font-bold tracking-[1px] sm:tracking-[2px]" style={{ fontFamily: 'BOXENBOLDSERIF' }}>
               RESCO
             </span>
             <span className="text-[#95151c] font-['Manrope'] text-[8px] sm:text-[10px] tracking-[1px] sm:tracking-[1.5px]">
