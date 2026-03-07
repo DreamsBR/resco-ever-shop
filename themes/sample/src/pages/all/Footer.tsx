@@ -57,10 +57,10 @@ export default function Footer() {
               Comprar
             </a>
             <a href="#nuestra-carne" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Nuestra Carne
+              Acerca De Nosotros
             </a>
             <a href="#sostenibilidad" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Sostenibilidad
+              Proveedores
             </a>
           </div>
 
