@@ -35,7 +35,7 @@ export default function AboutPage() {
             Contamos con la capacidad logística y el manejo de altos volúmenes de carne, lo que nos permite abastecer de manera eficiente tanto a hogares como a negocios gastronómicos, garantizando calidad y cumplimiento en cada pedido.
           </p>
           <p className="about-page__text">
-            En RESCO, entendemos la importancia del tiempo y la planificación, por ello trabajamos mediante pedidos realizados con 24 horas de anticipacion, garantizando preparacion adecuada, frescura y entrega confiable.
+            En RESCO, entendemos la importancia del tiempo y la planificación, por ello trabajamos mediante pedidos realizados con 24 horas de anticipación, garantizando preparación adecuada, frescura y entrega confiable.
           </p>
           <p className="about-page__text">
             Mas que una empresa, somos una familia comprometida con brindar seguridad, confianza y calidad en cada compra.
