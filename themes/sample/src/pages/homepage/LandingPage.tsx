@@ -70,8 +70,8 @@ const heroSlides = [
   },
   {
     id: 5,
-    title: "Maestros Carniceros",
-    subtitle: "Expertos dedicados a ofrecerte cortes perfectos en cada visita",
+    title: "Cortes Seleccionados",
+    subtitle: "Cada corte es seleccionado cuidadosamente para garantizar frescura, calidad al mejor precio",
     image: "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
   }
 ];
@@ -310,7 +310,7 @@ function CategoriesSection({ categories }: CategoriesSectionProps) {
   );
 }
 
-// ============ NUESTRA CARNE SECTION ============
+// ============ ACERCA DE NOSOTROS SECTION ============
 function NuestraCarneSection() {
   const ref = useIntersectionObserver();
 
@@ -327,19 +327,19 @@ function NuestraCarneSection() {
       {/* Content */}
       <div className="flex-1 flex flex-col justify-center gap-6 lg:gap-8 bg-[#95151c] px-6 sm:px-12 lg:px-20 py-12 lg:py-20">
         <span className="text-[#f9f4e1] font-['Manrope'] text-xs font-semibold tracking-[3px] opacity-70 animate-fade-up delay-1">
-          NUESTRA CARNE
+          ACERCA DE NOSOTROS
         </span>
         <h2 className="text-[#f9f4e1] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-5xl leading-[1.15] animate-fade-up delay-2">
-          Tradición y
+          Tradición,
           <br />
-          Calidad en
+          Calidad y
           <br />
-          Cada Corte
+          Confianza en Cada Corte
         </h2>
         <p className="text-[#f9f4e1] font-['Manrope'] text-sm lg:text-[15px] leading-[1.7] opacity-90 max-w-[420px] animate-fade-up delay-3">
-          Trabajamos directamente con los mejores ganaderos de la región, garantizando carnes de primera
-          calidad con trazabilidad completa. Nuestro proceso de maduración en seco realza el sabor y la
-          terneza de cada pieza.
+          Con más de 38 años de experiencia en el mercado cárnico, en RESCO ofrecemos carne de res de alta
+          calidad con capacidad para manejar grandes volúmenes, garantizando frescura, confianza y un
+          abastecimiento seguro para hogares y negocios.
         </p>
         <a
           href="/about"
@@ -380,7 +380,7 @@ function SustainabilityCard({ icon, title, description, index }: SustainabilityC
   );
 }
 
-// ============ SOSTENIBILIDAD SECTION ============
+// ============ PROVEEDORES SECTION ============
 function SostenibilidadSection() {
   const ref = useIntersectionObserver();
 
@@ -390,13 +390,13 @@ function SostenibilidadSection() {
         {/* Header */}
         <div className="flex flex-col items-center gap-4 lg:gap-5">
           <span className="text-[#95151c] font-['Manrope'] text-xs font-semibold tracking-[3px] animate-fade-up delay-1">
-            COMPROMISO AMBIENTAL
+            NUESTRO PROCESO
           </span>
           <h2 className="text-[#95151c] font-['Playfair_Display'] text-3xl sm:text-4xl lg:text-5xl animate-fade-up delay-2">
-            Sostenibilidad
+            Calidad y Confianza en Cada Corte
           </h2>
           <p className="text-[#000000] font-['Manrope'] text-sm lg:text-base leading-[1.6] text-center max-w-[600px] px-4 animate-fade-up delay-3">
-            Creemos en una producción responsable que respeta el medio ambiente y el bienestar animal.
+            En RESCO, seguimos un proceso cuidadoso de selección, conservación y distribución para garantizar carne de res de alta calidad y un abastecimiento confiable para hogares y negocios gastronómicos.
           </p>
         </div>
 
@@ -410,8 +410,8 @@ function SostenibilidadSection() {
                 <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
               </svg>
             }
-            title="Ganadería<br/>Responsable"
-            description="Trabajamos con productores que practican ganadería regenerativa y bienestar animal."
+            title="Selección de<br/>Calidad"
+            description="Seleccionamos cuidadosamente cada pieza de carne para garantizar frescura, sabor y altos estándares en cada corte."
           />
           <SustainabilityCard
             index={1}
@@ -425,8 +425,8 @@ function SostenibilidadSection() {
                 <path d="m13.378 9.633 4.096 1.098 1.097-4.096" />
               </svg>
             }
-            title="Empaque<br/>Ecológico"
-            description="Utilizamos materiales biodegradables y reciclables en todos nuestros empaques."
+            title="Conservación e<br/>Higiene"
+            description="Aplicamos adecuados procesos de conservación y manipulación para asegurar que nuestros productos lleguen en óptimas condiciones."
           />
           <SustainabilityCard
             index={2}
@@ -436,8 +436,8 @@ function SostenibilidadSection() {
                 <circle cx="12" cy="10" r="3" />
               </svg>
             }
-            title="Producción<br/>Local"
-            description="Apoyamos a productores locales reduciendo la huella de carbono en el transporte."
+            title="Abastecimiento<br/>Confiable"
+            description="Contamos con experiencia en manejo de grandes volúmenes, podemos abastecer de manera eficiente cualquier tipo de demanda."
           />
         </div>
       </div>
