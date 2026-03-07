@@ -411,7 +411,7 @@ function SostenibilidadSection() {
               </svg>
             }
             title="Selección de<br/>Calidad"
-            description="Seleccionamos cuidadosamente cada pieza de carne para garantizar frescura, sabor y altos estandares en cada corte."
+            description="Seleccionamos cuidadosamente cada pieza de carne para garantizar frescura, sabor y altos estándares en cada corte."
           />
           <SustainabilityCard
             index={1}
