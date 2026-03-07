@@ -437,7 +437,7 @@ function SostenibilidadSection() {
               </svg>
             }
             title="Abastecimiento<br/>Confiable"
-            description="Contamos con experiencia en manejo de grandes volumenes , podemos abastecer de manera eficiente, cualquier tipo de demanda."
+            description="Contamos con experiencia en manejo de grandes volúmenes, podemos abastecer de manera eficiente cualquier tipo de demanda."
           />
         </div>
       </div>
