@@ -426,7 +426,7 @@ function SostenibilidadSection() {
               </svg>
             }
             title="Conservación e<br/>Higiene"
-            description="Aplicamos adecuadaos procesos de conservación y manipulación para asegurar que nuestro producto lleguen en óptimas condiciones."
+            description="Aplicamos adecuados procesos de conservación y manipulación para asegurar que nuestros productos lleguen en óptimas condiciones."
           />
           <SustainabilityCard
             index={2}
