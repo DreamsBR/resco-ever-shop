@@ -8,6 +8,7 @@ COPY package*.json .
 # 2. Copy themes and extensions (npm workspaces need them for install).
 COPY themes ./themes
 COPY extensions ./extensions
+COPY patches ./patches
 
 # 3. Install dependencies (cached unless package*.json, themes or extensions change).
 RUN npm install
@@ -33,6 +34,9 @@ COPY images ./public/assets/images
 
 # 9. Copy font files to public/assets/fonts.
 RUN mkdir -p public/assets/fonts && cp themes/sample/src/pages/all/*.woff* public/assets/fonts/
+
+# 10. Create media directory for Railway persistent volume.
+RUN mkdir -p /app/media
 
 EXPOSE 3000
 CMD ["npm", "run", "start"]
