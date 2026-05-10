@@ -37,6 +37,19 @@ export default function GoogleFonts() {
               overflow-x: hidden;
             }
 
+            /* Offset fixed header so page titles are not covered */
+            .content,
+            main {
+              padding-top: 96px;
+            }
+
+            @media (min-width: 640px) {
+              .content,
+              main {
+                padding-top: 120px;
+              }
+            }
+
             /* Font fallbacks */
             .font-playfair {
               font-family: 'Playfair Display', Georgia, serif;
