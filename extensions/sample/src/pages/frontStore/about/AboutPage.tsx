@@ -8,7 +8,7 @@ export default function AboutPage() {
         <span className="about-page__tagline">NOSOTROS</span>
         <h1 className="about-page__title">Sobre Resco</h1>
         <p className="about-page__intro">
-          Más de 30 años llevando los mejores cortes de carne a hogares y negocios en todo el país.
+          Más de 38 años llevando los mejores cortes de carne a hogares y negocios.
         </p>
       </section>
 
@@ -26,13 +26,19 @@ export default function AboutPage() {
         <div className="about-page__section-content">
           <h2 className="about-page__section-title">Nuestra Historia</h2>
           <p className="about-page__text">
-            Resco nació con la convicción de ofrecer carnes de la más alta calidad a precios justos. Desde nuestros inicios, nos hemos dedicado a seleccionar cuidadosamente cada corte, trabajando directamente con los mejores ganaderos de la región para garantizar frescura, sabor y excelencia en cada producto.
+            RESCO es un negocio familiar peruano con más de 38 años de experiencia en el mercado cárnico, dedicado a ofrecer carne de res de alta calidad con la confianza y compromiso que nuestros clientes merecen.
           </p>
           <p className="about-page__text">
-            Contamos con un equipo de maestros carniceros con décadas de experiencia, quienes combinan técnicas tradicionales con los más altos estándares de higiene y calidad. Cada pieza que sale de nuestras instalaciones pasa por un riguroso proceso de selección para asegurar que solo lo mejor llegue a tu mesa.
+            A lo largo de los años hemos construido una sólida reputación basada en la selección cuidadosa del producto, la frescura y altos estándares de manejo e higiene.
           </p>
           <p className="about-page__text">
-            Hoy, Resco es sinónimo de confianza y calidad. Atendemos tanto a familias que buscan los mejores cortes para sus reuniones como a restaurantes y negocios que exigen consistencia y excelencia en cada entrega.
+            Contamos con la capacidad logística y el manejo de altos volúmenes de carne, lo que nos permite abastecer de manera eficiente tanto a hogares como a negocios gastronómicos, garantizando calidad y cumplimiento en cada pedido.
+          </p>
+          <p className="about-page__text">
+            En RESCO, entendemos la importancia del tiempo y la planificación, por ello trabajamos mediante pedidos realizados con 24 horas de anticipación, garantizando preparación adecuada, frescura y entrega confiable.
+          </p>
+          <p className="about-page__text">
+            Mas que una empresa, somos una familia comprometida con brindar seguridad, confianza y calidad en cada compra.
           </p>
         </div>
       </section>
@@ -48,9 +54,9 @@ export default function AboutPage() {
               <circle cx="12" cy="12" r="2" />
             </svg>
           </div>
-          <h2 className="about-page__card-title">Misión</h2>
+          <h2 className="about-page__card-title">MISIÓN</h2>
           <p className="about-page__card-text">
-            Proveer a nuestros clientes carnes frescas y de primera calidad, garantizando un servicio excepcional, precios competitivos y un compromiso inquebrantable con la higiene y la seguridad alimentaria. Nos esforzamos por ser el aliado confiable de cada hogar y negocio, entregando productos que superen las expectativas y contribuyan a momentos memorables alrededor de la mesa.
+            Brindar carne de res fresca y de alta calidad, garantizando procesos responsables, preparación y entrega, generando confianza en cada cliente. 
           </p>
         </div>
 
@@ -62,9 +68,9 @@ export default function AboutPage() {
               <circle cx="12" cy="12" r="3" />
             </svg>
           </div>
-          <h2 className="about-page__card-title">Visión</h2>
+          <h2 className="about-page__card-title">NUESTRA VISIÓN</h2>
           <p className="about-page__card-text">
-            Ser la distribuidora de carnes líder y más reconocida de la región, destacándose por la innovación en sus procesos, la sostenibilidad de sus prácticas y la preferencia absoluta de nuestros clientes. Aspiramos a expandir nuestra presencia manteniendo siempre los valores de calidad, honestidad y cercanía que nos caracterizan desde el primer día.
+            Ser reconocidos como una empresa familiar referente en la comercialización de carne de res en Perú, destacando por nuestra experiencia, compromiso familiar y excelencia en el servicio. 
           </p>
         </div>
       </section>

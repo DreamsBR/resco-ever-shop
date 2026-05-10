@@ -51,10 +51,10 @@ export default function Footer() {
               Comprar
             </a>
             <a href="#nuestra-carne" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Nuestra Carne
+              Acerca De Nosotros
             </a>
             <a href="#sostenibilidad" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Sostenibilidad
+              Proveedores
             </a>
           </div>
 
@@ -63,17 +63,14 @@ export default function Footer() {
             <span className="text-[#f9f4e1] font-['Manrope'] text-[11px] font-semibold tracking-[2px]">
               PRODUCTOS
             </span>
-            <a href="/categories" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Cortes Premium
+            <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
+              Carne de res
             </a>
-            <a href="/categories" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Hamburguesas
+            <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
+              Cortes parrilleros
             </a>
-            <a href="/categories" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Embutidos
-            </a>
-            <a href="/categories" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Ofertas
+            <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
+              Carne de cerdo
             </a>
           </div>
         </div>

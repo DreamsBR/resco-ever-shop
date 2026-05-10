@@ -121,10 +121,10 @@ export default function Header() {
             COMPRAR
           </a>
           <a href="/#nuestra-carne" className="text-[#95151c] font-['Manrope'] text-sm font-medium tracking-[1px] hover:font-bold hover:underline transition-all">
-            NUESTRA CARNE
+            ACERCA DE NOSOTROS
           </a>
           <a href="/#sostenibilidad" className="text-[#95151c] font-['Manrope'] text-sm font-medium tracking-[1px] hover:font-bold hover:underline transition-all">
-            SOSTENIBILIDAD
+            PROVEEDORES
           </a>
           <a href="/contact" className="text-[#95151c] font-['Manrope'] text-sm font-medium tracking-[1px] hover:font-bold hover:underline transition-all">
             CONTACTO
@@ -462,10 +462,10 @@ export default function Header() {
               COMPRAR
             </a>
             <a href="/#nuestra-carne" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
-              NUESTRA CARNE
+              ACERCA DE NOSOTROS
             </a>
             <a href="/#sostenibilidad" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
-              SOSTENIBILIDAD
+              PROVEEDORES
             </a>
             <a href="/contact" className="text-[#95151c] font-['Manrope'] text-lg font-medium tracking-[1px]" onClick={() => setIsMenuOpen(false)}>
               CONTACTO

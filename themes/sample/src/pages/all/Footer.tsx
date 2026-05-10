@@ -35,7 +35,7 @@ export default function Footer() {
               </svg>
             </a>
             <a href="https://www.tiktok.com/@resco.pe" target="_blank" rel="noopener noreferrer" className="text-[#f9f4e1] hover:opacity-80 transition-opacity">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14 4v8.5a4.5 4.5 0 1 1-4.5-4.5" />
                 <path d="M14 4c1.1 2 2.8 3 5 3.2" />
               </svg>
@@ -57,10 +57,10 @@ export default function Footer() {
               Comprar
             </a>
             <a href="#nuestra-carne" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Nuestra Carne
+              Acerca De Nosotros
             </a>
             <a href="#sostenibilidad" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Sostenibilidad
+              Proveedores
             </a>
           </div>
 
@@ -70,16 +70,13 @@ export default function Footer() {
               PRODUCTOS
             </span>
             <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Cortes Premium
+              Carne de res
             </a>
             <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Hamburguesas
+              Cortes parrilleros
             </a>
             <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Embutidos
-            </a>
-            <a href="/productos" className="text-[#f9f4e1] font-['Manrope'] text-[13px] opacity-70 hover:opacity-100 transition-opacity">
-              Ofertas
+              Carne de cerdo
             </a>
           </div>
         </div>
