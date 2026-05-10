@@ -9,6 +9,7 @@ export default function GoogleFonts() {
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
+      <link rel="icon" href="/assets/images/resco-logo.png" type="image/png" />
       <style
         dangerouslySetInnerHTML={{
           __html: `
