@@ -31,6 +31,10 @@ export default function WhatsAppButton() {
         <span className="whatsapp-btn__text">Pedir información por WhatsApp</span>
       </a>
       <style dangerouslySetInnerHTML={{ __html: `
+        .product__single__name {
+          padding-top: 30px;
+        }
+
         .product-image {
           overflow: hidden;
         }
