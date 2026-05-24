@@ -35,10 +35,6 @@ export default function WhatsAppButton() {
           padding-top: 30px;
         }
 
-        .product__single__description {
-          display: none;
-        }
-
         .product-image {
           overflow: hidden;
         }
